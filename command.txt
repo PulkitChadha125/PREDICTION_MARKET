@@ -1,0 +1,172 @@
+:: =============================================================================
+:: PredictionMarket backend — curl reference (Windows cmd.exe)
+:: Replace placeholders: YOUR_ACCOUNT, CONID_YES, CONID_NO, ORDER_ID, etc.
+:: Backend default: http://127.0.0.1:8000  (uvicorn main:app --reload)
+:: Use -k only if you terminate TLS to IBKR yourself; these hit FastAPI (HTTP).
+:: =============================================================================
+
+set BASE=http://127.0.0.1:8000
+
+:: -----------------------------------------------------------------------------
+:: Auth / session (IBKR gateway must be logged in at https://localhost:5000)
+:: -----------------------------------------------------------------------------
+
+curl -s "%BASE%/auth/status"
+curl -s "%BASE%/auth/ready"
+
+:: -----------------------------------------------------------------------------
+:: Symbol / topic fetch (prediction markets & discovery)
+:: -----------------------------------------------------------------------------
+
+:: Search underlyings by symbol (e.g. NQ, FF)
+curl -s "%BASE%/events/search?symbol=NQ&sec_type=IND"
+
+:: All topics from IBKR category tree (ForecastEx filter)
+curl -s "%BASE%/events/topics/all?exchange=FORECASTX"
+
+:: Compact “console” list — all symbols when category tree works (omit symbols=)
+curl -s "%BASE%/events/topics/console?exchange=FORECASTX"
+
+:: Same endpoint with explicit symbols (when tree is unavailable)
+curl -s "%BASE%/events/topics/console?symbols=FF,USIP&exchange=FORECASTX"
+
+:: Discover underlyings before chain
+curl -s "%BASE%/events/discover?symbol=NQ&sec_type=IND&exchange=CME"
+
+:: Strikes for a month (use underlying conid from discover/console)
+curl -s "%BASE%/events/strikes?conid=UNDERLYING_CONID&sectype=OPT&month=202605&exchange=CME"
+
+:: Raw contract rows at one strike
+curl -s "%BASE%/events/contracts?conid=UNDERLYING_CONID&sectype=OPT&month=202605&exchange=CME&strike=18500"
+
+:: Normalized YES/NO chain (symbol path; IB tries conid candidates)
+curl -s "%BASE%/events/chain?symbol=NQ&sec_type=IND&month=202605&exchange=CME&sectype=OPT"
+
+:: Chain when you already know underlying conid (faster; matches the web UI)
+curl -s "%BASE%/events/chain?symbol=FF&sec_type=IND&month=202605&exchange=FORECASTX&sectype=OPT&conid=123456789"
+
+:: FOP-style month (some products); try if OPT chain is empty
+curl -s "%BASE%/events/chain?symbol=YOURSYM&sec_type=IND&month=202605&exchange=FORECASTX&sectype=FOP&conid=123456789"
+
+:: -----------------------------------------------------------------------------
+:: Order placement
+:: -----------------------------------------------------------------------------
+
+:: BUY YES leg (Call / YES contract conid from /events/chain)
+curl -s -X POST "%BASE%/orders/yes" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"account_id\":\"YOUR_ACCOUNT\",\"conid\":CONID_YES,\"quantity\":1,\"order_type\":\"MKT\",\"price\":null,\"tif\":\"DAY\",\"auto_confirm\":true,\"sec_type_suffix\":\"OPT\"}"
+
+:: BUY NO leg (Put / NO contract conid from /events/chain)
+curl -s -X POST "%BASE%/orders/no" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"account_id\":\"YOUR_ACCOUNT\",\"conid\":CONID_NO,\"quantity\":1,\"order_type\":\"MKT\",\"price\":null,\"tif\":\"DAY\"}"
+
+:: Generic BUY or SELL
+curl -s -X POST "%BASE%/orders" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"account_id\":\"YOUR_ACCOUNT\",\"conid\":CONID_LEG,\"side\":\"SELL\",\"quantity\":1,\"order_type\":\"MKT\",\"price\":null,\"tif\":\"DAY\"}"
+
+:: Limit YES with price
+curl -s -X POST "%BASE%/orders/yes" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"account_id\":\"YOUR_ACCOUNT\",\"conid\":CONID_YES,\"quantity\":1,\"order_type\":\"LMT\",\"price\":0.42,\"tif\":\"DAY\"}"
+
+:: What-if preview (no submit)
+curl -s -X POST "%BASE%/orders/whatif" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"account_id\":\"YOUR_ACCOUNT\",\"conid\":CONID_YES,\"side\":\"BUY\",\"quantity\":1,\"order_type\":\"LMT\",\"price\":0.40,\"tif\":\"DAY\"}"
+
+:: Answer IBKR warning prompt manually (when auto_confirm was false; reply_id from broker list)
+curl -s -X POST "%BASE%/orders/reply" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"reply_id\":\"REPLY_ID_FROM_BROKER\",\"confirmed\":true}"
+
+:: -----------------------------------------------------------------------------
+:: Orders — monitor / cancel
+:: -----------------------------------------------------------------------------
+
+curl -s "%BASE%/orders/live?account_id=YOUR_ACCOUNT"
+
+:: Cancel one order (order_id from live orders or placement response)
+curl -s -X DELETE "%BASE%/orders/ORDER_ID?account_id=YOUR_ACCOUNT"
+
+:: IBKR: cancel ALL open orders for account (use with care)
+curl -s -X DELETE "%BASE%/orders/-1?account_id=YOUR_ACCOUNT"
+
+:: -----------------------------------------------------------------------------
+:: Root / health
+:: -----------------------------------------------------------------------------
+
+curl -s "%BASE%/"
+
+:: =============================================================================
+:: PowerShell (optional): same calls with variable
+::   $BASE = "http://127.0.0.1:8000"
+::   Invoke-RestMethod "$BASE/auth/status"
+:: =============================================================================
+
+:: =============================================================================
+:: Direct IBKR Client Portal (gateway on your machine; default TLS localhost)
+:: Session cookie from browser / gateway login. Examples only — prefer this app.
+:: =============================================================================
+
+:: set IBKR=https://localhost:5000/v1/api
+:: curl -k -s "%IBKR%/iserver/auth/status"
+:: curl -k -s "%IBKR%/iserver/accounts"
+:: curl -k -s "%IBKR%/iserver/secdef/search?symbol=NQ&secType=IND"
+
+
+
+
+
+
+
+
+
+
+exact url:
+curl -s "http://127.0.0.1:8000/auth/status"
+curl -s "http://127.0.0.1:8000/auth/ready"
+curl -s "http://127.0.0.1:8000/events/search?symbol=NQ&sec_type=IND"
+curl -s "http://127.0.0.1:8000/events/topics/all?exchange=FORECASTX"
+curl -s "http://127.0.0.1:8000/events/topics/console?exchange=FORECASTX"
+curl -s "http://127.0.0.1:8000/events/topics/console?symbols=FF,USIP&exchange=FORECASTX"
+curl -s "http://127.0.0.1:8000/events/discover?symbol=NQ&sec_type=IND&exchange=CME"
+curl -s "http://127.0.0.1:8000/events/strikes?conid=UNDERLYING_CONID&sectype=OPT&month=202605&exchange=CME"
+curl -s "http://127.0.0.1:8000/events/contracts?conid=UNDERLYING_CONID&sectype=OPT&month=202605&exchange=CME&strike=18500"
+curl -s "http://127.0.0.1:8000/events/chain?symbol=NQ&sec_type=IND&month=202605&exchange=CME&sectype=OPT"
+curl -s "http://127.0.0.1:8000/events/chain?symbol=FF&sec_type=IND&month=202605&exchange=FORECASTX&sectype=OPT&conid=123456789"
+curl -s "http://127.0.0.1:8000/events/chain?symbol=YOURSYM&sec_type=IND&month=202605&exchange=FORECASTX&sectype=FOP&conid=123456789"
+curl -s "http://127.0.0.1:8000/orders/live?account_id=YOUR_ACCOUNT"
+curl -s -X DELETE "http://127.0.0.1:8000/orders/ORDER_ID?account_id=YOUR_ACCOUNT"
+curl -s -X DELETE "http://127.0.0.1:8000/orders/-1?account_id=YOUR_ACCOUNT"
+curl -s "http://127.0.0.1:8000/"
+curl -s "http://127.0.0.1:8000/static/index.html"
+
+:: =============================================================================
+:: PowerShell order flow (recommended on Windows)
+:: Use curl.exe (not curl alias) and single-quoted JSON body.
+:: IMPORTANT: first fetch valid account id from /auth/ready
+:: =============================================================================
+
+curl.exe -s "http://127.0.0.1:8000/auth/ready"
+
+:: UHSFO example flow
+curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&exchange=FORECASTX"
+curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHSFO&sec_type=IND&month=202604&exchange=FORECASTX&sectype=OPT&conid=853400816"
+
+:: Place YES (example strike 67 YES conid: 873489344)
+curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Type: application/json" -d '{"account_id":"REAL_ACCOUNT_ID","conid":873489344,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
+
+:: Place NO (example strike 67 NO conid: 873489349)
+curl.exe -s -X POST "http://127.0.0.1:8000/orders/no" -H "Content-Type: application/json" -d '{"account_id":"REAL_ACCOUNT_ID","conid":873489349,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
+
+:: What-if preview
+curl.exe -s -X POST "http://127.0.0.1:8000/orders/whatif" -H "Content-Type: application/json" -d '{"account_id":"REAL_ACCOUNT_ID","conid":873489344,"side":"BUY","quantity":1,"order_type":"MKT","price":null,"tif":"DAY"}'
+
+:: Live orders
+curl.exe -s "http://127.0.0.1:8000/orders/live?account_id=REAL_ACCOUNT_ID"
+
+:: Confirm IBKR prompt if returned (reply_id from order response)
+curl.exe -s -X POST "http://127.0.0.1:8000/orders/reply" -H "Content-Type: application/json" -d '{"reply_id":"REPLY_ID_FROM_BROKER","confirmed":true}'

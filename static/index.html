@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prediction Market Console</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a2332;
+      --border: #2d3a4d;
+      --text: #e7ecf3;
+      --muted: #8b9cb3;
+      --accent: #3d8bfd;
+      --yes: #1fa971;
+      --no: #e85d6c;
+      --warn: #c9a227;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+      min-height: 100vh;
+    }
+    header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+    }
+    header h1 { margin: 0 0 0.35rem; font-size: 1.25rem; font-weight: 600; }
+    header p { margin: 0; color: var(--muted); font-size: 0.85rem; }
+    main { max-width: 960px; margin: 0 auto; padding: 1.25rem; }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 1rem;
+    }
+    section h2 { margin: 0 0 0.75rem; font-size: 0.95rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.65rem 1rem;
+      align-items: end;
+    }
+    label { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.2rem; }
+    input, select {
+      width: 100%;
+      padding: 0.45rem 0.55rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      padding: 0.55rem 1rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-yes { background: var(--yes); color: #fff; }
+    .btn-no { background: var(--no); color: #fff; }
+    .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .fetch-row { margin-top: 0.75rem; }
+    #symbols { display: flex; flex-direction: column; gap: 0.5rem; }
+    .sym-row {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      overflow: hidden;
+    }
+    .sym-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 1rem;
+      padding: 0.65rem 0.85rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .sym-head:hover { background: rgba(61, 139, 253, 0.08); }
+    .sym-head .code { font-weight: 700; font-size: 1rem; color: var(--accent); }
+    .sym-head .name { color: var(--muted); font-size: 0.85rem; flex: 1; min-width: 120px; }
+    .sym-head .meta { font-size: 0.75rem; color: var(--muted); }
+    .sym-body {
+      display: none;
+      padding: 0.85rem;
+      border-top: 1px solid var(--border);
+      gap: 0.75rem;
+      flex-direction: column;
+    }
+    .sym-body.open { display: flex; }
+    .strike-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-end; }
+    .strike-row select { max-width: 220px; }
+    .leg-btns { display: flex; gap: 0.4rem; }
+    .log {
+      font-family: ui-monospace, monospace;
+      font-size: 0.78rem;
+      background: #0a0e12;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.6rem;
+      max-height: 160px;
+      overflow: auto;
+      white-space: pre-wrap;
+      color: #a8c5e0;
+    }
+    .note { font-size: 0.8rem; color: var(--warn); margin-top: 0.5rem; }
+    .empty { color: var(--muted); font-size: 0.9rem; padding: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Prediction market console</h1>
+    <p>Fetch symbols from the backend, open a topic, pick month and strike, then place YES or NO orders (IBKR gateway must be logged in).</p>
+  </header>
+  <main>
+    <section>
+      <h2>Order defaults</h2>
+      <div class="grid">
+        <div>
+          <label for="accountId">Account ID</label>
+          <input id="accountId" type="text" placeholder="DU1234567" autocomplete="off" />
+        </div>
+        <div>
+          <label for="quantity">Quantity</label>
+          <input id="quantity" type="number" min="1" value="1" />
+        </div>
+        <div>
+          <label for="orderType">Order type</label>
+          <select id="orderType">
+            <option value="MKT">MKT</option>
+            <option value="LMT">LMT</option>
+          </select>
+        </div>
+        <div>
+          <label for="price">Limit price (LMT only)</label>
+          <input id="price" type="number" step="0.01" placeholder="optional" />
+        </div>
+        <div>
+          <label for="tif">TIF</label>
+          <select id="tif">
+            <option value="DAY">DAY</option>
+            <option value="GTC">GTC</option>
+          </select>
+        </div>
+        <div>
+          <label for="chainSectype">Chain sec type</label>
+          <select id="chainSectype">
+            <option value="OPT">OPT</option>
+            <option value="FOP">FOP</option>
+          </select>
+        </div>
+      </div>
+      <div class="fetch-row">
+        <button type="button" class="btn-primary" id="btnFetchSymbols">Fetch all the live symbols</button>
+      </div>
+      <p class="note" id="fetchNote"></p>
+    </section>
+
+    <section>
+      <h2>Symbols</h2>
+      <div id="symbols"><div class="empty">No symbols loaded yet.</div></div>
+    </section>
+
+    <section>
+      <h2>Log</h2>
+      <div class="log" id="log"></div>
+    </section>
+  </main>
+
+  <script>
+    const logEl = document.getElementById("log");
+    const symbolsEl = document.getElementById("symbols");
+    const fetchNote = document.getElementById("fetchNote");
+
+    function log(msg, obj) {
+      const line = typeof obj !== "undefined"
+        ? `${msg} ${JSON.stringify(obj, null, 2)}`
+        : String(msg);
+      logEl.textContent = `${new Date().toISOString().slice(11, 19)}  ${line}\n` + logEl.textContent;
+    }
+
+    async function apiJson(url, options = {}) {
+      const res = await fetch(url, { ...options, headers: { "Content-Type": "application/json", ...options.headers } });
+      const text = await res.text();
+      let data;
+      try { data = text ? JSON.parse(text) : null; } catch { data = { raw: text }; }
+      if (!res.ok) {
+        const detail = data && data.detail !== undefined ? data.detail : data;
+        throw new Error(`${res.status} ${res.statusText}: ${typeof detail === "string" ? detail : JSON.stringify(detail)}`);
+      }
+      return data;
+    }
+
+    function orderBody(conid) {
+      const account_id = document.getElementById("accountId").value.trim();
+      if (!account_id) throw new Error("Enter Account ID");
+      const quantity = parseInt(document.getElementById("quantity").value, 10) || 1;
+      const order_type = document.getElementById("orderType").value;
+      const tif = document.getElementById("tif").value;
+      const priceRaw = document.getElementById("price").value.trim();
+      const price = priceRaw === "" ? null : parseFloat(priceRaw);
+      return { account_id, conid, quantity, order_type, price, tif, auto_confirm: true };
+    }
+
+    async function placeYes(conid) {
+      const body = orderBody(conid);
+      const data = await apiJson("/orders/yes", { method: "POST", body: JSON.stringify(body) });
+      log("YES order response", data);
+    }
+
+    async function placeNo(conid) {
+      const body = orderBody(conid);
+      const data = await apiJson("/orders/no", { method: "POST", body: JSON.stringify(body) });
+      log("NO order response", data);
+    }
+
+    let topics = [];
+
+    document.getElementById("btnFetchSymbols").addEventListener("click", async () => {
+      fetchNote.textContent = "";
+      symbolsEl.innerHTML = '<div class="empty">Loading…</div>';
+      try {
+        const data = await apiJson("/events/topics/console");
+        topics = data.topics || [];
+        if (data.note) fetchNote.textContent = data.note;
+        if (!topics.length) {
+          symbolsEl.innerHTML = '<div class="empty">No topics returned. Try setting symbols on the server or check IBKR category tree.</div>';
+          return;
+        }
+        symbolsEl.innerHTML = "";
+        topics.forEach((t, idx) => {
+          const row = document.createElement("div");
+          row.className = "sym-row";
+          row.dataset.index = String(idx);
+
+          const head = document.createElement("div");
+          head.className = "sym-head";
+          head.innerHTML = `
+            <span class="code">${escapeHtml(t.symbol)}</span>
+            <span class="name">${escapeHtml(t.name || "")}</span>
+            <span class="meta">conid ${t.conid} · ${escapeHtml(t.exchange || "")}</span>
+          `;
+
+          const body = document.createElement("div");
+          body.className = "sym-body";
+
+          const months = Array.isArray(t.months) ? t.months : [];
+          const monthList = months.length
+            ? months.map((m) => `<option value="${escapeHtml(m)}"></option>`).join("")
+            : "";
+
+          body.innerHTML = `
+            <div class="grid">
+              <div>
+                <label>Month (YYYYMM or IB format)</label>
+                <input type="text" class="inp-month" list="dl-${idx}" placeholder="e.g. 202605" value="${months[0] || ""}" />
+                <datalist id="dl-${idx}">${monthList}</datalist>
+              </div>
+              <div>
+                <label>Exchange</label>
+                <input type="text" class="inp-exch" value="${escapeHtml(t.exchange || "FORECASTX")}" />
+              </div>
+            </div>
+            <div>
+              <button type="button" class="btn-ghost btn-load-chain">Load strikes (chain)</button>
+            </div>
+            <div class="strike-row" style="display:none" data-strike-row>
+              <div>
+                <label>Strike</label>
+                <select class="sel-strike"><option value="">Select strike…</option></select>
+              </div>
+              <div class="leg-btns" data-leg-btns style="display:none">
+                <button type="button" class="btn-yes btn-yes-leg">YES</button>
+                <button type="button" class="btn-no btn-no-leg">NO</button>
+              </div>
+            </div>
+            <div class="log chain-dump" style="display:none; max-height:100px;"></div>
+          `;
+
+          head.addEventListener("click", () => {
+            body.classList.toggle("open");
+          });
+
+          const btnLoad = body.querySelector(".btn-load-chain");
+          const inpMonth = body.querySelector(".inp-month");
+          const inpExch = body.querySelector(".inp-exch");
+          const strikeRow = body.querySelector("[data-strike-row]");
+          const selStrike = body.querySelector(".sel-strike");
+          const legBtns = body.querySelector("[data-leg-btns]");
+          const btnYes = body.querySelector(".btn-yes-leg");
+          const btnNo = body.querySelector(".btn-no-leg");
+          const chainDump = body.querySelector(".chain-dump");
+
+          let chainPairs = [];
+
+          btnLoad.addEventListener("click", async (ev) => {
+            ev.stopPropagation();
+            const month = inpMonth.value.trim();
+            const exchange = inpExch.value.trim();
+            if (!month) {
+              log("Enter a contract month.");
+              return;
+            }
+            const sectype = document.getElementById("chainSectype").value;
+            btnLoad.disabled = true;
+            try {
+              const q = new URLSearchParams({
+                symbol: t.symbol,
+                sec_type: "IND",
+                month,
+                exchange,
+                sectype,
+                conid: String(t.conid),
+              });
+              const chain = await apiJson(`/events/chain?${q}`);
+              chainPairs = chain.contracts || [];
+              selStrike.innerHTML = '<option value="">Select strike…</option>';
+              chainPairs.forEach((pair, i) => {
+                const opt = document.createElement("option");
+                opt.value = String(i);
+                const yesDesc = pair.yes_contract && pair.yes_contract.description;
+                const noDesc = pair.no_contract && pair.no_contract.description;
+                const displayLabel = yesDesc || noDesc || `Strike ${pair.strike}`;
+                opt.textContent = displayLabel;
+                selStrike.appendChild(opt);
+              });
+              strikeRow.style.display = "flex";
+              chainDump.style.display = "block";
+              chainDump.textContent = JSON.stringify(chainPairs.slice(0, 5), null, 2) + (chainPairs.length > 5 ? "\n…" : "");
+              log(`Chain loaded: ${t.symbol} ${month} (${chainPairs.length} strikes)`);
+            } catch (e) {
+              log(`Chain error: ${e.message}`);
+              strikeRow.style.display = "none";
+              legBtns.style.display = "none";
+            } finally {
+              btnLoad.disabled = false;
+            }
+          });
+
+          selStrike.addEventListener("change", () => {
+            const i = parseInt(selStrike.value, 10);
+            if (Number.isNaN(i) || !chainPairs[i]) {
+              legBtns.style.display = "none";
+              return;
+            }
+            legBtns.style.display = "flex";
+            const yesC = chainPairs[i].yes_contract && chainPairs[i].yes_contract.conid;
+            const noC = chainPairs[i].no_contract && chainPairs[i].no_contract.conid;
+            btnYes.disabled = !yesC;
+            btnNo.disabled = !noC;
+            btnYes.dataset.conid = yesC || "";
+            btnNo.dataset.conid = noC || "";
+          });
+
+          btnYes.addEventListener("click", async (ev) => {
+            ev.stopPropagation();
+            const c = parseInt(btnYes.dataset.conid, 10);
+            if (!c) return log("No YES conid for this strike.");
+            try { await placeYes(c); } catch (e) { log(`YES order failed: ${e.message}`); }
+          });
+          btnNo.addEventListener("click", async (ev) => {
+            ev.stopPropagation();
+            const c = parseInt(btnNo.dataset.conid, 10);
+            if (!c) return log("No NO conid for this strike.");
+            try { await placeNo(c); } catch (e) { log(`NO order failed: ${e.message}`); }
+          });
+
+          row.appendChild(head);
+          row.appendChild(body);
+          symbolsEl.appendChild(row);
+        });
+        log(`Loaded ${topics.length} symbols.`);
+      } catch (e) {
+        symbolsEl.innerHTML = `<div class="empty">Error: ${escapeHtml(e.message)}</div>`;
+        log(`Fetch symbols failed: ${e.message}`);
+      }
+    });
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    fetch("/")
+      .then((r) => r.json())
+      .then((j) => {
+        if (j.default_account_id) {
+          document.getElementById("accountId").value = j.default_account_id;
+        }
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+{
+  "generated_at_utc": "2026-04-14T07:26:02.556686+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "records": [
+    {
+      "title": "Auth status",
+      "endpoint": "/auth/status",
+      "params": {},
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 2441,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Auth readiness",
+      "endpoint": "/auth/ready",
+      "params": {},
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 358,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/all exchange=FORECASTX",
+      "endpoint": "/events/topics/all",
+      "params": {
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 2486,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+      },
+      "error": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+    },
+    {
+      "title": "Topics/all exchange=CME",
+      "endpoint": "/events/topics/all",
+      "params": {
+        "exchange": "CME"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 355,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+      },
+      "error": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+    },
+    {
+      "title": "Topics/all exchange=CBOT",
+      "endpoint": "/events/topics/all",
+      "params": {
+        "exchange": "CBOT"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 381,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+      },
+      "error": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+    },
+    {
+      "title": "Topics/all exchange=SMART",
+      "endpoint": "/events/topics/all",
+      "params": {
+        "exchange": "SMART"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 352,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+      },
+      "error": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+    },
+    {
+      "title": "Topics/all exchange omitted",
+      "endpoint": "/events/topics/all",
+      "params": {},
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 353,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+      },
+      "error": "IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+    },
+    {
+      "title": "Topics/console all (exchange=FORECASTX)",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "exchange": "FORECASTX"
+      },
+      "ok": true,
+      "status_code": 200,
+      "elapsed_ms": 353,
+      "summary": "topics=0",
+      "response_preview": {
+        "status": "success",
+        "total_topics": 0,
+        "topics_sample": [],
+        "note": "All-topics endpoint is unavailable on this gateway build. Pass symbols list explicitly, e.g. ?symbols=FF,USIP. Details: IBKR HTTP error: 401 Client Error: Unauthorized for url: https://localhost:5000/v1/api/trsrv/event/category-tree"
+      },
+      "error": null
+    },
+    {
+      "title": "Topics/console chunk 1",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "FF",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 357,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 2",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "USIP",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 370,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 3",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "CPI",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 345,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 4",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "GDP",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 349,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 5",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "NQ",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 348,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 6",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "ES",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 347,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 7",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "RTY",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 347,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 8",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "YM",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 352,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 9",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "CL",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 353,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 10",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "GC",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 365,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 11",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "SI",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 350,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 12",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "NG",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 397,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 13",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "ZN",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 349,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 14",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "ZB",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 361,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 15",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "ZT",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 366,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Topics/console chunk 16",
+      "endpoint": "/events/topics/console",
+      "params": {
+        "symbols": "VX",
+        "exchange": "FORECASTX"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 368,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Search symbol=FF sec_type=IND",
+      "endpoint": "/events/search",
+      "params": {
+        "symbol": "FF",
+        "sec_type": "IND"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 371,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Search symbol=FF sec_type=STK",
+      "endpoint": "/events/search",
+      "params": {
+        "symbol": "FF",
+        "sec_type": "STK"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 353,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Search symbol=FF sec_type=FUT",
+      "endpoint": "/events/search",
+      "params": {
+        "symbol": "FF",
+        "sec_type": "FUT"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 383,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    },
+    {
+      "title": "Search symbol=FF sec_type=CMDTY",
+      "endpoint": "/events/search",
+      "params": {
+        "symbol": "FF",
+        "sec_type": "CMDTY"
+      },
+      "ok": false,
+      "status_code": 502,
+      "elapsed_ms": 357,
+      "summary": "request_failed",
+      "response_preview": {
+        "detail": "IBKR HTTP error: "
+      },
+      "error": "IBKR HTTP error: "
+    }
+  ],
+  "unique_topics": [],
+  "chain_probe_results": []
+}
