@@ -92,16 +92,18 @@ Use one value from `accounts_response.accounts` as `REAL_ACCOUNT_ID`.
 ### 2) Fetch topic + chain
 
 ```powershell
-curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&exchange=FORECASTX"
-curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHSFO&sec_type=IND&month=202604&exchange=FORECASTX&sectype=OPT&conid=853400816"
+curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHBNA&exchange=FORECASTX"
+curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHBNA&sec_type=IND&month=202604&exchange=FORECASTX&sectype=OPT&conid=851808931"
 ```
-
+harshit : U25234273
 ### 3) Place YES / NO
 
 ```powershell
-curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Type: application/json" -d '{"account_id":"REAL_ACCOUNT_ID","conid":873489344,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
-curl.exe -s -X POST "http://127.0.0.1:8000/orders/no"  -H "Content-Type: application/json" -d '{"account_id":"REAL_ACCOUNT_ID","conid":873489349,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
+curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Type: application/json" -d '{"account_id":"U25234273","conid":873488537,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
+curl.exe -s -X POST "http://127.0.0.1:8000/orders/no"  -H "Content-Type: application/json" -d '{"account_id":"873489349","conid":873489349,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
 ```
+
+other ex: curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Type: application/json" -d '{"account_id":"DUP766324","conid":873489344,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
 
 ### 4) Check live orders
 

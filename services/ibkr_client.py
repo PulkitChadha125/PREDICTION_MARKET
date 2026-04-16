@@ -37,7 +37,6 @@ class IBKRClient:
 
     def _request(self, method: str, endpoint: str, **kwargs: Any) -> Any:
         """Centralized HTTP request with consistent error handling and logging."""
-        url = f"{self.base_url}{endpoint}"
         try:
             response = self._raw_request(method=method, endpoint=endpoint, **kwargs)
             response.raise_for_status()
@@ -54,19 +53,49 @@ class IBKRClient:
                     endpoint,
                 )
                 self.initialize_brokerage_session()
-                retry_response = self._raw_request(method=method, endpoint=endpoint, **kwargs)
-                retry_response.raise_for_status()
-                if retry_response.text.strip():
-                    return retry_response.json()
-                return {}
-            logger.error("IBKR HTTP error on %s %s: %s", method, endpoint, text)
-            raise IBKRClientError(f"IBKR HTTP error: {text}") from exc
+                try:
+                    retry_response = self._raw_request(
+                        method=method, endpoint=endpoint, **kwargs
+                    )
+                    retry_response.raise_for_status()
+                    if retry_response.text.strip():
+                        return retry_response.json()
+                    return {}
+                except requests.exceptions.HTTPError as retry_exc:
+                    detail = self._format_http_error_message(
+                        retry_exc.response, fallback=str(retry_exc)
+                    )
+                    logger.error(
+                        "IBKR HTTP retry error on %s %s: %s", method, endpoint, detail
+                    )
+                    raise IBKRClientError(f"IBKR HTTP error: {detail}") from retry_exc
+            detail = self._format_http_error_message(exc.response, fallback=text)
+            logger.error("IBKR HTTP error on %s %s: %s", method, endpoint, detail)
+            raise IBKRClientError(f"IBKR HTTP error: {detail}") from exc
         except requests.exceptions.RequestException as exc:
             logger.error("IBKR request failed on %s %s: %s", method, endpoint, exc)
             raise IBKRClientError(f"Could not reach IBKR gateway: {exc}") from exc
         except ValueError as exc:
             logger.error("IBKR returned non-JSON response for %s %s", method, endpoint)
             raise IBKRClientError("IBKR returned invalid JSON response.") from exc
+
+    @staticmethod
+    def _format_http_error_message(
+        response: requests.Response | None, fallback: str
+    ) -> str:
+        """Build readable HTTP error details even when response body is empty."""
+        if response is None:
+            return fallback or "Unknown HTTP error"
+
+        status = response.status_code
+        reason = (response.reason or "").strip()
+        body = response.text.strip()
+
+        if body:
+            return f"HTTP {status} {reason} - {body}".strip()
+        if reason:
+            return f"HTTP {status} {reason}"
+        return f"HTTP {status}"
 
     def _raw_request(self, method: str, endpoint: str, **kwargs: Any) -> requests.Response:
         """Send an HTTP request to IBKR without parsing response."""
