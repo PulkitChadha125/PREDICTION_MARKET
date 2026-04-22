@@ -1,0 +1,7595 @@
+{
+  "input_csv": "CME.EventContracts.20260421.csv",
+  "base_url": "https://localhost:5000/v1/api",
+  "verify_ssl": false,
+  "symbols_scanned": 840,
+  "hits": [
+    {
+      "source_symbol": "CSCI",
+      "sec_type_used": "FOP",
+      "conid": "721297997",
+      "symbol": "CSCI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "COSCIENS BIOPHARMA INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSCI",
+      "sec_type_used": "FUT",
+      "conid": "721297997",
+      "symbol": "CSCI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "COSCIENS BIOPHARMA INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSCI",
+      "sec_type_used": "IND",
+      "conid": "721297997",
+      "symbol": "CSCI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "COSCIENS BIOPHARMA INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSCI",
+      "sec_type_used": "OPT",
+      "conid": "721297997",
+      "symbol": "CSCI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "COSCIENS BIOPHARMA INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSJ",
+      "sec_type_used": "FOP",
+      "conid": "368285512",
+      "symbol": "CSJ",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB",
+      "company_name": "CSL LIMITED",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSJ",
+      "sec_type_used": "FUT",
+      "conid": "368285512",
+      "symbol": "CSJ",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB",
+      "company_name": "CSL LIMITED",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSJ",
+      "sec_type_used": "IND",
+      "conid": "368285512",
+      "symbol": "CSJ",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB",
+      "company_name": "CSL LIMITED",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSJ",
+      "sec_type_used": "OPT",
+      "conid": "368285512",
+      "symbol": "CSJ",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB",
+      "company_name": "CSL LIMITED",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSO",
+      "sec_type_used": "FOP",
+      "conid": "603517496",
+      "symbol": "CSO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "CALNEX SOLUTIONS PLC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSO",
+      "sec_type_used": "FUT",
+      "conid": "603517496",
+      "symbol": "CSO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "CALNEX SOLUTIONS PLC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSO",
+      "sec_type_used": "IND",
+      "conid": "603517496",
+      "symbol": "CSO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "CALNEX SOLUTIONS PLC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSO",
+      "sec_type_used": "OPT",
+      "conid": "603517496",
+      "symbol": "CSO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "CALNEX SOLUTIONS PLC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSS",
+      "sec_type_used": "FOP",
+      "conid": "475686918",
+      "symbol": "CSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "COINSHARES INTERNATIONAL LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "757491014"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSS",
+      "sec_type_used": "FUT",
+      "conid": "475686918",
+      "symbol": "CSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "COINSHARES INTERNATIONAL LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "757491014"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSS",
+      "sec_type_used": "IND",
+      "conid": "475686918",
+      "symbol": "CSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "COINSHARES INTERNATIONAL LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "757491014"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSS",
+      "sec_type_used": "OPT",
+      "conid": "475686918",
+      "symbol": "CSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "COINSHARES INTERNATIONAL LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "757491014"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSTA",
+      "sec_type_used": "FOP",
+      "conid": "443719177",
+      "symbol": "CSTA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS",
+      "company_name": "AMUNDI EURSTX600 TECHNLG",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSTA",
+      "sec_type_used": "FUT",
+      "conid": "443719177",
+      "symbol": "CSTA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS",
+      "company_name": "AMUNDI EURSTX600 TECHNLG",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSTA",
+      "sec_type_used": "IND",
+      "conid": "443719177",
+      "symbol": "CSTA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS",
+      "company_name": "AMUNDI EURSTX600 TECHNLG",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSTA",
+      "sec_type_used": "OPT",
+      "conid": "443719177",
+      "symbol": "CSTA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS",
+      "company_name": "AMUNDI EURSTX600 TECHNLG",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSTC",
+      "sec_type_used": "FOP",
+      "conid": "866508563",
+      "symbol": "CSTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "COINSHARES TNCOIN STKD-CSPST",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSTC",
+      "sec_type_used": "FUT",
+      "conid": "866508563",
+      "symbol": "CSTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "COINSHARES TNCOIN STKD-CSPST",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSTC",
+      "sec_type_used": "IND",
+      "conid": "866508563",
+      "symbol": "CSTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "COINSHARES TNCOIN STKD-CSPST",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSTC",
+      "sec_type_used": "OPT",
+      "conid": "866508563",
+      "symbol": "CSTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "COINSHARES TNCOIN STKD-CSPST",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "FOP",
+      "conid": "127236934",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "CST BRANDS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "FOP",
+      "conid": "125571497",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "CST BRANDS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "FOP",
+      "conid": "402321355",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "CASTILE RESOURCES LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "FUT",
+      "conid": "127236934",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "CST BRANDS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "FUT",
+      "conid": "125571497",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "CST BRANDS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "FUT",
+      "conid": "402321355",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "CASTILE RESOURCES LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "IND",
+      "conid": "127236934",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "CST BRANDS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "IND",
+      "conid": "125571497",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "CST BRANDS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "IND",
+      "conid": "402321355",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "CASTILE RESOURCES LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "OPT",
+      "conid": "127236934",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "CST BRANDS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "OPT",
+      "conid": "125571497",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "CST BRANDS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CST",
+      "sec_type_used": "OPT",
+      "conid": "402321355",
+      "symbol": "CST",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "CASTILE RESOURCES LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSU",
+      "sec_type_used": "FOP",
+      "conid": "39194759",
+      "symbol": "CSU",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "CONSTELLATION SOFTWARE INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSU",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSU",
+      "sec_type_used": "FUT",
+      "conid": "39194759",
+      "symbol": "CSU",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "CONSTELLATION SOFTWARE INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSU",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSU",
+      "sec_type_used": "IND",
+      "conid": "39194759",
+      "symbol": "CSU",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "CONSTELLATION SOFTWARE INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSU",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSU",
+      "sec_type_used": "OPT",
+      "conid": "39194759",
+      "symbol": "CSU",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "CONSTELLATION SOFTWARE INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSU",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSUS",
+      "sec_type_used": "FOP",
+      "conid": "72083288",
+      "symbol": "CSUS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHARES MSCI USA USD ACC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSUS",
+      "sec_type_used": "FUT",
+      "conid": "72083288",
+      "symbol": "CSUS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHARES MSCI USA USD ACC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSUS",
+      "sec_type_used": "IND",
+      "conid": "72083288",
+      "symbol": "CSUS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHARES MSCI USA USD ACC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSUS",
+      "sec_type_used": "OPT",
+      "conid": "72083288",
+      "symbol": "CSUS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHARES MSCI USA USD ACC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "FOP",
+      "conid": "6150",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "CSX CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "APR26;MAY26;JUN26;JUL26;AUG26;SEP26;NOV26;DEC26;JAN27;MAR27;JUN27;JAN28",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "WAR",
+          "months": "MAR26;JUN26;SEP26;DEC26;MAR27;JUN27;DEC27",
+          "exchange": "SWB"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "120551358"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "FOP",
+      "conid": "321227729",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "CSX CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "FOP",
+      "conid": "451691004",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "CLEANSPACE HOLDINGS LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "FUT",
+      "conid": "6150",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "CSX CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "APR26;MAY26;JUN26;JUL26;AUG26;SEP26;NOV26;DEC26;JAN27;MAR27;JUN27;JAN28",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "WAR",
+          "months": "MAR26;JUN26;SEP26;DEC26;MAR27;JUN27;DEC27",
+          "exchange": "SWB"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "120551358"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "FUT",
+      "conid": "321227729",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "CSX CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "FUT",
+      "conid": "451691004",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "CLEANSPACE HOLDINGS LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "IND",
+      "conid": "6150",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "CSX CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "APR26;MAY26;JUN26;JUL26;AUG26;SEP26;NOV26;DEC26;JAN27;MAR27;JUN27;JAN28",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "WAR",
+          "months": "MAR26;JUN26;SEP26;DEC26;MAR27;JUN27;DEC27",
+          "exchange": "SWB"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "120551358"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "IND",
+      "conid": "321227729",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "CSX CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "IND",
+      "conid": "451691004",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "CLEANSPACE HOLDINGS LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "OPT",
+      "conid": "6150",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "CSX CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "APR26;MAY26;JUN26;JUL26;AUG26;SEP26;NOV26;DEC26;JAN27;MAR27;JUN27;JAN28",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "WAR",
+          "months": "MAR26;JUN26;SEP26;DEC26;MAR27;JUN27;DEC27",
+          "exchange": "SWB"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "120551358"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "OPT",
+      "conid": "321227729",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "CSX CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "OPT",
+      "conid": "451691004",
+      "symbol": "CSX",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "CLEANSPACE HOLDINGS LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "CSX",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECGD",
+      "sec_type_used": "FOP",
+      "conid": "723404779",
+      "symbol": "ECGD",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSEETF",
+      "company_name": "L&G MS ENCO GBPH DIS ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECGD",
+      "sec_type_used": "FUT",
+      "conid": "723404779",
+      "symbol": "ECGD",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSEETF",
+      "company_name": "L&G MS ENCO GBPH DIS ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECGD",
+      "sec_type_used": "IND",
+      "conid": "723404779",
+      "symbol": "ECGD",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSEETF",
+      "company_name": "L&G MS ENCO GBPH DIS ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECGD",
+      "sec_type_used": "OPT",
+      "conid": "723404779",
+      "symbol": "ECGD",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSEETF",
+      "company_name": "L&G MS ENCO GBPH DIS ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "FOP",
+      "conid": "249176545",
+      "symbol": "ECN",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "ECN CAPITAL CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;JUL26;AUG26;SEP26;OCT26;DEC26;MAR27",
+          "exchange": "CDE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "FOP",
+      "conid": "400654787",
+      "symbol": "ECN",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "ECNOLOGY SA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "FUT",
+      "conid": "249176545",
+      "symbol": "ECN",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "ECN CAPITAL CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;JUL26;AUG26;SEP26;OCT26;DEC26;MAR27",
+          "exchange": "CDE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "FUT",
+      "conid": "400654787",
+      "symbol": "ECN",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "ECNOLOGY SA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "IND",
+      "conid": "249176545",
+      "symbol": "ECN",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "ECN CAPITAL CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;JUL26;AUG26;SEP26;OCT26;DEC26;MAR27",
+          "exchange": "CDE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "IND",
+      "conid": "400654787",
+      "symbol": "ECN",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "ECNOLOGY SA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "OPT",
+      "conid": "249176545",
+      "symbol": "ECN",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "ECN CAPITAL CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;JUL26;AUG26;SEP26;OCT26;DEC26;MAR27",
+          "exchange": "CDE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "OPT",
+      "conid": "400654787",
+      "symbol": "ECN",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "ECNOLOGY SA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECN",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECU",
+      "sec_type_used": "FOP",
+      "conid": "458378580",
+      "symbol": "ECU",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "ELEMENT 29 RESOURCES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECU",
+      "sec_type_used": "FUT",
+      "conid": "458378580",
+      "symbol": "ECU",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "ELEMENT 29 RESOURCES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECU",
+      "sec_type_used": "IND",
+      "conid": "458378580",
+      "symbol": "ECU",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "ELEMENT 29 RESOURCES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECU",
+      "sec_type_used": "OPT",
+      "conid": "458378580",
+      "symbol": "ECU",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "ELEMENT 29 RESOURCES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "FOP",
+      "conid": "362739067",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "CI ENHANCED SHORT DUR BOND",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "FOP",
+      "conid": "125864644",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "FRANKLIN FINANCIAL NETWORK",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "FOP",
+      "conid": "820573072",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB",
+      "company_name": "HUB24 LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "FUT",
+      "conid": "362739067",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "CI ENHANCED SHORT DUR BOND",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "FUT",
+      "conid": "125864644",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "FRANKLIN FINANCIAL NETWORK",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "FUT",
+      "conid": "820573072",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB",
+      "company_name": "HUB24 LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "IND",
+      "conid": "362739067",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "CI ENHANCED SHORT DUR BOND",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "IND",
+      "conid": "125864644",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "FRANKLIN FINANCIAL NETWORK",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "IND",
+      "conid": "820573072",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB",
+      "company_name": "HUB24 LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "OPT",
+      "conid": "362739067",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "CI ENHANCED SHORT DUR BOND",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "OPT",
+      "conid": "125864644",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "FRANKLIN FINANCIAL NETWORK",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "OPT",
+      "conid": "820573072",
+      "symbol": "FSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB",
+      "company_name": "HUB24 LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSB",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSC",
+      "sec_type_used": "FOP",
+      "conid": "299612200",
+      "symbol": "FSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "FUTURE SUPPLY CHAIN SOLUTION",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSC",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSC",
+      "sec_type_used": "FUT",
+      "conid": "299612200",
+      "symbol": "FSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "FUTURE SUPPLY CHAIN SOLUTION",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSC",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSC",
+      "sec_type_used": "IND",
+      "conid": "299612200",
+      "symbol": "FSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "FUTURE SUPPLY CHAIN SOLUTION",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSC",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSC",
+      "sec_type_used": "OPT",
+      "conid": "299612200",
+      "symbol": "FSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "FUTURE SUPPLY CHAIN SOLUTION",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSC",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSCI",
+      "sec_type_used": "FOP",
+      "conid": "836375292",
+      "symbol": "FSCI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "FI GL CO BD RE EN PA UE-EHI",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSCI",
+      "sec_type_used": "FUT",
+      "conid": "836375292",
+      "symbol": "FSCI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "FI GL CO BD RE EN PA UE-EHI",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSCI",
+      "sec_type_used": "IND",
+      "conid": "836375292",
+      "symbol": "FSCI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "FI GL CO BD RE EN PA UE-EHI",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSCI",
+      "sec_type_used": "OPT",
+      "conid": "836375292",
+      "symbol": "FSCI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "FI GL CO BD RE EN PA UE-EHI",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSLVX",
+      "sec_type_used": "FOP",
+      "conid": "51028471",
+      "symbol": "FSLVX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "FIDELITY LARGE CAP VALUE FUND (Fidelity)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSLVX",
+      "sec_type_used": "FUT",
+      "conid": "51028471",
+      "symbol": "FSLVX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "FIDELITY LARGE CAP VALUE FUND (Fidelity)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSLVX",
+      "sec_type_used": "IND",
+      "conid": "51028471",
+      "symbol": "FSLVX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "FIDELITY LARGE CAP VALUE FUND (Fidelity)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSLVX",
+      "sec_type_used": "OPT",
+      "conid": "51028471",
+      "symbol": "FSLVX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "FIDELITY LARGE CAP VALUE FUND (Fidelity)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "FOP",
+      "conid": "133736560",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "FIRST TRUST SENIOR LOAN ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "FOP",
+      "conid": "128937772",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "FOSSIL GROUP INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "FOP",
+      "conid": "56983589",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NSE",
+      "company_name": "FIRSTSOURCE SOLUTIONS LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "NSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "FUT",
+      "conid": "133736560",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "FIRST TRUST SENIOR LOAN ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "FUT",
+      "conid": "128937772",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "FOSSIL GROUP INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "FUT",
+      "conid": "56983589",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NSE",
+      "company_name": "FIRSTSOURCE SOLUTIONS LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "NSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "IND",
+      "conid": "133736560",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "FIRST TRUST SENIOR LOAN ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "IND",
+      "conid": "128937772",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "FOSSIL GROUP INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "IND",
+      "conid": "56983589",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NSE",
+      "company_name": "FIRSTSOURCE SOLUTIONS LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "NSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "OPT",
+      "conid": "133736560",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "FIRST TRUST SENIOR LOAN ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "OPT",
+      "conid": "128937772",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "FOSSIL GROUP INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "OPT",
+      "conid": "56983589",
+      "symbol": "FSL",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NSE",
+      "company_name": "FIRSTSOURCE SOLUTIONS LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "NSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSL",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSP",
+      "sec_type_used": "FOP",
+      "conid": "34764855",
+      "symbol": "FSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "AMEX",
+      "company_name": "FRANKLIN STREET PROPERTIES C",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSP",
+      "sec_type_used": "FUT",
+      "conid": "34764855",
+      "symbol": "FSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "AMEX",
+      "company_name": "FRANKLIN STREET PROPERTIES C",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSP",
+      "sec_type_used": "IND",
+      "conid": "34764855",
+      "symbol": "FSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "AMEX",
+      "company_name": "FRANKLIN STREET PROPERTIES C",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSP",
+      "sec_type_used": "OPT",
+      "conid": "34764855",
+      "symbol": "FSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "AMEX",
+      "company_name": "FRANKLIN STREET PROPERTIES C",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSS",
+      "sec_type_used": "FOP",
+      "conid": "7381",
+      "symbol": "FSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "FEDERAL SIGNAL CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "266310370"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSS",
+      "sec_type_used": "FUT",
+      "conid": "7381",
+      "symbol": "FSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "FEDERAL SIGNAL CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "266310370"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSS",
+      "sec_type_used": "IND",
+      "conid": "7381",
+      "symbol": "FSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "FEDERAL SIGNAL CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "266310370"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSS",
+      "sec_type_used": "OPT",
+      "conid": "7381",
+      "symbol": "FSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "FEDERAL SIGNAL CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MERCURY;MIAX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "266310370"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSTBX",
+      "sec_type_used": "FOP",
+      "conid": "141153804",
+      "symbol": "FSTBX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "FEDERATED HERMES GLOBAL ALLOCATION FD (Federated Hermes Funds)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSTBX",
+      "sec_type_used": "FUT",
+      "conid": "141153804",
+      "symbol": "FSTBX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "FEDERATED HERMES GLOBAL ALLOCATION FD (Federated Hermes Funds)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSTBX",
+      "sec_type_used": "IND",
+      "conid": "141153804",
+      "symbol": "FSTBX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "FEDERATED HERMES GLOBAL ALLOCATION FD (Federated Hermes Funds)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "FSTBX",
+      "sec_type_used": "OPT",
+      "conid": "141153804",
+      "symbol": "FSTBX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "FEDERATED HERMES GLOBAL ALLOCATION FD (Federated Hermes Funds)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HGV",
+      "sec_type_used": "FOP",
+      "conid": "257939796",
+      "symbol": "HGV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "HILTON GRAND VACATIONS INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;JUL26;OCT26;DEC26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "261392926"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HGV",
+      "sec_type_used": "FOP",
+      "conid": "624214742",
+      "symbol": "HGV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "HILTON GRAND VACATIONS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HGV",
+      "sec_type_used": "FUT",
+      "conid": "257939796",
+      "symbol": "HGV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "HILTON GRAND VACATIONS INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;JUL26;OCT26;DEC26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "261392926"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HGV",
+      "sec_type_used": "FUT",
+      "conid": "624214742",
+      "symbol": "HGV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "HILTON GRAND VACATIONS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HGV",
+      "sec_type_used": "IND",
+      "conid": "257939796",
+      "symbol": "HGV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "HILTON GRAND VACATIONS INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;JUL26;OCT26;DEC26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "261392926"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HGV",
+      "sec_type_used": "IND",
+      "conid": "624214742",
+      "symbol": "HGV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "HILTON GRAND VACATIONS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HGV",
+      "sec_type_used": "OPT",
+      "conid": "257939796",
+      "symbol": "HGV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "HILTON GRAND VACATIONS INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;JUL26;OCT26;DEC26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;GEMINI;IBUSOPT;ISE;MEMX;MIAX;NASDAQBX;NASDAQOM;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "261392926"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HGV",
+      "sec_type_used": "OPT",
+      "conid": "624214742",
+      "symbol": "HGV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "MEXI",
+      "company_name": "HILTON GRAND VACATIONS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "MEXI;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HHV",
+      "sec_type_used": "FOP",
+      "conid": "780744571",
+      "symbol": "HHV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "HARGREAVE HALE AIM VCT PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HHV",
+      "sec_type_used": "FUT",
+      "conid": "780744571",
+      "symbol": "HHV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "HARGREAVE HALE AIM VCT PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HHV",
+      "sec_type_used": "IND",
+      "conid": "780744571",
+      "symbol": "HHV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "HARGREAVE HALE AIM VCT PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HHV",
+      "sec_type_used": "OPT",
+      "conid": "780744571",
+      "symbol": "HHV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "HARGREAVE HALE AIM VCT PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSB",
+      "sec_type_used": "FOP",
+      "conid": "408887225",
+      "symbol": "HSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HANG SENG BANK LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSB",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSB",
+      "sec_type_used": "FUT",
+      "conid": "408887225",
+      "symbol": "HSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HANG SENG BANK LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSB",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSB",
+      "sec_type_used": "IND",
+      "conid": "408887225",
+      "symbol": "HSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HANG SENG BANK LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSB",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSB",
+      "sec_type_used": "OPT",
+      "conid": "408887225",
+      "symbol": "HSB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HANG SENG BANK LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSB",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSED",
+      "sec_type_used": "FOP",
+      "conid": "571598640",
+      "symbol": "HSED",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HSBC EUROPE SCREENED EQ ETF",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSED",
+      "sec_type_used": "FUT",
+      "conid": "571598640",
+      "symbol": "HSED",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HSBC EUROPE SCREENED EQ ETF",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSED",
+      "sec_type_used": "IND",
+      "conid": "571598640",
+      "symbol": "HSED",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HSBC EUROPE SCREENED EQ ETF",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSED",
+      "sec_type_used": "OPT",
+      "conid": "571598640",
+      "symbol": "HSED",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HSBC EUROPE SCREENED EQ ETF",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSMI",
+      "sec_type_used": "FOP",
+      "conid": "74262473",
+      "symbol": "HSMI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "HKFE",
+      "company_name": "Hang Seng Composite MidCap Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "HKFE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSMI",
+      "sec_type_used": "FUT",
+      "conid": "74262473",
+      "symbol": "HSMI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "HKFE",
+      "company_name": "Hang Seng Composite MidCap Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "HKFE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSMI",
+      "sec_type_used": "IND",
+      "conid": "74262473",
+      "symbol": "HSMI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "HKFE",
+      "company_name": "Hang Seng Composite MidCap Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "HKFE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSMI",
+      "sec_type_used": "OPT",
+      "conid": "74262473",
+      "symbol": "HSMI",
+      "sec_type": null,
+      "exchange": null,
+      "description": "HKFE",
+      "company_name": "Hang Seng Composite MidCap Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "HKFE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "FOP",
+      "conid": "74084652",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "HKFE",
+      "company_name": "Hang Seng Property Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "HKFE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "FOP",
+      "conid": "28774539",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HOSPIRA INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "FOP",
+      "conid": "48014320",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "HARGREAVES SERVICES PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "FUT",
+      "conid": "74084652",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "HKFE",
+      "company_name": "Hang Seng Property Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "HKFE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "FUT",
+      "conid": "28774539",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HOSPIRA INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "FUT",
+      "conid": "48014320",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "HARGREAVES SERVICES PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "IND",
+      "conid": "74084652",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "HKFE",
+      "company_name": "Hang Seng Property Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "HKFE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "IND",
+      "conid": "28774539",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HOSPIRA INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "IND",
+      "conid": "48014320",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "HARGREAVES SERVICES PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "OPT",
+      "conid": "74084652",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "HKFE",
+      "company_name": "Hang Seng Property Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "HKFE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "OPT",
+      "conid": "28774539",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HOSPIRA INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "OPT",
+      "conid": "48014320",
+      "symbol": "HSP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "HARGREAVES SERVICES PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSP",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSV",
+      "sec_type_used": "FOP",
+      "conid": "200213814",
+      "symbol": "HSV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HOMESERVE PLC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSV",
+      "sec_type_used": "FUT",
+      "conid": "200213814",
+      "symbol": "HSV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HOMESERVE PLC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSV",
+      "sec_type_used": "IND",
+      "conid": "200213814",
+      "symbol": "HSV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HOMESERVE PLC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HSV",
+      "sec_type_used": "OPT",
+      "conid": "200213814",
+      "symbol": "HSV",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "HOMESERVE PLC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "FOP",
+      "conid": "110418094",
+      "symbol": "HTB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "HOMETRUST BANCSHARES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;AMEX;BOX;IBUSOPT;PHLX"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "314725548"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "FOP",
+      "conid": "700079725",
+      "symbol": "HTB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "GLO X US 7-10YR TRES IND COR",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "FUT",
+      "conid": "110418094",
+      "symbol": "HTB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "HOMETRUST BANCSHARES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;AMEX;BOX;IBUSOPT;PHLX"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "314725548"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "FUT",
+      "conid": "700079725",
+      "symbol": "HTB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "GLO X US 7-10YR TRES IND COR",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "IND",
+      "conid": "110418094",
+      "symbol": "HTB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "HOMETRUST BANCSHARES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;AMEX;BOX;IBUSOPT;PHLX"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "314725548"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "IND",
+      "conid": "700079725",
+      "symbol": "HTB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "GLO X US 7-10YR TRES IND COR",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "OPT",
+      "conid": "110418094",
+      "symbol": "HTB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "HOMETRUST BANCSHARES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;AMEX;BOX;IBUSOPT;PHLX"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "314725548"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "OPT",
+      "conid": "700079725",
+      "symbol": "HTB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "GLO X US 7-10YR TRES IND COR",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTB",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTV",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTV",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTV",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "HTV",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGC",
+      "sec_type_used": "FOP",
+      "conid": "566205785",
+      "symbol": "LGC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LAVRAS GOLD CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGC",
+      "sec_type_used": "FOP",
+      "conid": "603519854",
+      "symbol": "LGC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "HERITAGE GLOBAL INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGC",
+      "sec_type_used": "FUT",
+      "conid": "566205785",
+      "symbol": "LGC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LAVRAS GOLD CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGC",
+      "sec_type_used": "FUT",
+      "conid": "603519854",
+      "symbol": "LGC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "HERITAGE GLOBAL INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGC",
+      "sec_type_used": "IND",
+      "conid": "566205785",
+      "symbol": "LGC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LAVRAS GOLD CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGC",
+      "sec_type_used": "IND",
+      "conid": "603519854",
+      "symbol": "LGC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "HERITAGE GLOBAL INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGC",
+      "sec_type_used": "OPT",
+      "conid": "566205785",
+      "symbol": "LGC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LAVRAS GOLD CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGC",
+      "sec_type_used": "OPT",
+      "conid": "603519854",
+      "symbol": "LGC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "HERITAGE GLOBAL INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGP",
+      "sec_type_used": "FOP",
+      "conid": "404491443",
+      "symbol": "LGP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "LITTLE GREEN PHARMA LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGP",
+      "sec_type_used": "FUT",
+      "conid": "404491443",
+      "symbol": "LGP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "LITTLE GREEN PHARMA LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGP",
+      "sec_type_used": "IND",
+      "conid": "404491443",
+      "symbol": "LGP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "LITTLE GREEN PHARMA LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LGP",
+      "sec_type_used": "OPT",
+      "conid": "404491443",
+      "symbol": "LGP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "LITTLE GREEN PHARMA LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "FOP",
+      "conid": "473509892",
+      "symbol": "LHC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LEO HOLDINGS CORP II-CLASS A",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "FOP",
+      "conid": "290088182",
+      "symbol": "LHC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "JSE",
+      "company_name": "LIFE HEALTHCARE GROUP HOLDIN",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "JSE;"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "304818608"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "FUT",
+      "conid": "473509892",
+      "symbol": "LHC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LEO HOLDINGS CORP II-CLASS A",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "FUT",
+      "conid": "290088182",
+      "symbol": "LHC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "JSE",
+      "company_name": "LIFE HEALTHCARE GROUP HOLDIN",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "JSE;"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "304818608"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "IND",
+      "conid": "473509892",
+      "symbol": "LHC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LEO HOLDINGS CORP II-CLASS A",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "IND",
+      "conid": "290088182",
+      "symbol": "LHC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "JSE",
+      "company_name": "LIFE HEALTHCARE GROUP HOLDIN",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "JSE;"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "304818608"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "OPT",
+      "conid": "473509892",
+      "symbol": "LHC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LEO HOLDINGS CORP II-CLASS A",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "OPT",
+      "conid": "290088182",
+      "symbol": "LHC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "JSE",
+      "company_name": "LIFE HEALTHCARE GROUP HOLDIN",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "JSE;"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "304818608"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHC",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHS",
+      "sec_type_used": "FOP",
+      "conid": "324529557",
+      "symbol": "LHS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LIBERTY HEALTH SCIENCES INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHS",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHS",
+      "sec_type_used": "FUT",
+      "conid": "324529557",
+      "symbol": "LHS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LIBERTY HEALTH SCIENCES INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHS",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHS",
+      "sec_type_used": "IND",
+      "conid": "324529557",
+      "symbol": "LHS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LIBERTY HEALTH SCIENCES INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHS",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHS",
+      "sec_type_used": "OPT",
+      "conid": "324529557",
+      "symbol": "LHS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LIBERTY HEALTH SCIENCES INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHS",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHTB",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHTB",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHTB",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LHTB",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPC",
+      "sec_type_used": "FOP",
+      "conid": "137937861",
+      "symbol": "LPC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LORNE PARK CAPITAL PARTNERS",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPC",
+      "sec_type_used": "FUT",
+      "conid": "137937861",
+      "symbol": "LPC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LORNE PARK CAPITAL PARTNERS",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPC",
+      "sec_type_used": "IND",
+      "conid": "137937861",
+      "symbol": "LPC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LORNE PARK CAPITAL PARTNERS",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPC",
+      "sec_type_used": "OPT",
+      "conid": "137937861",
+      "symbol": "LPC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LORNE PARK CAPITAL PARTNERS",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPP",
+      "sec_type_used": "FOP",
+      "conid": "228789940",
+      "symbol": "LPP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "LPP SA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPP",
+      "sec_type_used": "FUT",
+      "conid": "228789940",
+      "symbol": "LPP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "LPP SA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPP",
+      "sec_type_used": "IND",
+      "conid": "228789940",
+      "symbol": "LPP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "LPP SA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPP",
+      "sec_type_used": "OPT",
+      "conid": "228789940",
+      "symbol": "LPP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "LPP SA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPSDX",
+      "sec_type_used": "FOP",
+      "conid": "141425759",
+      "symbol": "LPSDX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "LifePath 2030 Portfolio - Class K (Blackrock Funds)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPSDX",
+      "sec_type_used": "FUT",
+      "conid": "141425759",
+      "symbol": "LPSDX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "LifePath 2030 Portfolio - Class K (Blackrock Funds)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPSDX",
+      "sec_type_used": "IND",
+      "conid": "141425759",
+      "symbol": "LPSDX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "LifePath 2030 Portfolio - Class K (Blackrock Funds)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPSDX",
+      "sec_type_used": "OPT",
+      "conid": "141425759",
+      "symbol": "LPSDX",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "LifePath 2030 Portfolio - Class K (Blackrock Funds)",
+      "sections": [
+        {
+          "secType": "FUND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "FOP",
+      "conid": "52152730",
+      "symbol": "LPS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LENDER PROCESSING SERVICES",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "FOP",
+      "conid": "136256621",
+      "symbol": "LPS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LEGEND POWER SYSTEMS INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "FUT",
+      "conid": "52152730",
+      "symbol": "LPS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LENDER PROCESSING SERVICES",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "FUT",
+      "conid": "136256621",
+      "symbol": "LPS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LEGEND POWER SYSTEMS INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "IND",
+      "conid": "52152730",
+      "symbol": "LPS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LENDER PROCESSING SERVICES",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "IND",
+      "conid": "136256621",
+      "symbol": "LPS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LEGEND POWER SYSTEMS INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "OPT",
+      "conid": "52152730",
+      "symbol": "LPS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LENDER PROCESSING SERVICES",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "OPT",
+      "conid": "136256621",
+      "symbol": "LPS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LEGEND POWER SYSTEMS INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LPS",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSAT",
+      "sec_type_used": "FOP",
+      "conid": "452087669",
+      "symbol": "LSAT",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "LEADERSHARES ALPHAFACT TACT",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSAT",
+      "sec_type_used": "FUT",
+      "conid": "452087669",
+      "symbol": "LSAT",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "LEADERSHARES ALPHAFACT TACT",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSAT",
+      "sec_type_used": "IND",
+      "conid": "452087669",
+      "symbol": "LSAT",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "LEADERSHARES ALPHAFACT TACT",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSAT",
+      "sec_type_used": "OPT",
+      "conid": "452087669",
+      "symbol": "LSAT",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "LEADERSHARES ALPHAFACT TACT",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSC",
+      "sec_type_used": "FOP",
+      "conid": "268360116",
+      "symbol": "LSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LSC LITHIUM CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSC",
+      "sec_type_used": "FOP",
+      "conid": "748086642",
+      "symbol": "LSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "LONDON SECURITY PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSC",
+      "sec_type_used": "FUT",
+      "conid": "268360116",
+      "symbol": "LSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LSC LITHIUM CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSC",
+      "sec_type_used": "FUT",
+      "conid": "748086642",
+      "symbol": "LSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "LONDON SECURITY PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSC",
+      "sec_type_used": "IND",
+      "conid": "268360116",
+      "symbol": "LSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LSC LITHIUM CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSC",
+      "sec_type_used": "IND",
+      "conid": "748086642",
+      "symbol": "LSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "LONDON SECURITY PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSC",
+      "sec_type_used": "OPT",
+      "conid": "268360116",
+      "symbol": "LSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LSC LITHIUM CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSC",
+      "sec_type_used": "OPT",
+      "conid": "748086642",
+      "symbol": "LSC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSE",
+      "company_name": "LONDON SECURITY PLC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSS",
+      "sec_type_used": "FOP",
+      "conid": "82676344",
+      "symbol": "LSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "SBF",
+      "company_name": "LECTRA",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "384918789"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSS",
+      "sec_type_used": "FOP",
+      "conid": "534278850",
+      "symbol": "LSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "SGX",
+      "company_name": "PHLP-NVA MSC SNGPR 2XLVRG-SG",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "SGX;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSS",
+      "sec_type_used": "FUT",
+      "conid": "82676344",
+      "symbol": "LSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "SBF",
+      "company_name": "LECTRA",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "384918789"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSS",
+      "sec_type_used": "FUT",
+      "conid": "534278850",
+      "symbol": "LSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "SGX",
+      "company_name": "PHLP-NVA MSC SNGPR 2XLVRG-SG",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "SGX;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSS",
+      "sec_type_used": "IND",
+      "conid": "82676344",
+      "symbol": "LSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "SBF",
+      "company_name": "LECTRA",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "384918789"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSS",
+      "sec_type_used": "IND",
+      "conid": "534278850",
+      "symbol": "LSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "SGX",
+      "company_name": "PHLP-NVA MSC SNGPR 2XLVRG-SG",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "SGX;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSS",
+      "sec_type_used": "OPT",
+      "conid": "82676344",
+      "symbol": "LSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "SBF",
+      "company_name": "LECTRA",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "384918789"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSS",
+      "sec_type_used": "OPT",
+      "conid": "534278850",
+      "symbol": "LSS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "SGX",
+      "company_name": "PHLP-NVA MSC SNGPR 2XLVRG-SG",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "SGX;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSTE",
+      "sec_type_used": "FOP",
+      "conid": "836770646",
+      "symbol": "LSTE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BVME.ETF",
+      "company_name": "WT PHYSICAL LIDO STAKED ETH",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSTE",
+      "sec_type_used": "FUT",
+      "conid": "836770646",
+      "symbol": "LSTE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BVME.ETF",
+      "company_name": "WT PHYSICAL LIDO STAKED ETH",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSTE",
+      "sec_type_used": "IND",
+      "conid": "836770646",
+      "symbol": "LSTE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BVME.ETF",
+      "company_name": "WT PHYSICAL LIDO STAKED ETH",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LSTE",
+      "sec_type_used": "OPT",
+      "conid": "836770646",
+      "symbol": "LSTE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BVME.ETF",
+      "company_name": "WT PHYSICAL LIDO STAKED ETH",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "FOP",
+      "conid": "498989715",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "Litecoin cryptocurrency",
+      "sections": [
+        {
+          "secType": "CRYPTO",
+          "exchange": "PAXOS;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "FOP",
+      "conid": "9240",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "LTC PROPERTIES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;IBUSOPT;ISE;MEMX;MERCURY;MIAX;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "266310442"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "FOP",
+      "conid": "760235613",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LOTUS CREEK EXPLORATION INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "FUT",
+      "conid": "498989715",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "Litecoin cryptocurrency",
+      "sections": [
+        {
+          "secType": "CRYPTO",
+          "exchange": "PAXOS;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "FUT",
+      "conid": "9240",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "LTC PROPERTIES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;IBUSOPT;ISE;MEMX;MERCURY;MIAX;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "266310442"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "FUT",
+      "conid": "760235613",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LOTUS CREEK EXPLORATION INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "IND",
+      "conid": "498989715",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "Litecoin cryptocurrency",
+      "sections": [
+        {
+          "secType": "CRYPTO",
+          "exchange": "PAXOS;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "IND",
+      "conid": "9240",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "LTC PROPERTIES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;IBUSOPT;ISE;MEMX;MERCURY;MIAX;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "266310442"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "IND",
+      "conid": "760235613",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LOTUS CREEK EXPLORATION INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "OPT",
+      "conid": "498989715",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": "Litecoin cryptocurrency",
+      "sections": [
+        {
+          "secType": "CRYPTO",
+          "exchange": "PAXOS;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "OPT",
+      "conid": "9240",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "LTC PROPERTIES INC",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;IBUSOPT;ISE;MEMX;MERCURY;MIAX;PEARL;PHLX;PSE;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "266310442"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTC",
+      "sec_type_used": "OPT",
+      "conid": "760235613",
+      "symbol": "LTC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VENTURE",
+      "company_name": "LOTUS CREEK EXPLORATION INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTS",
+      "sec_type_used": "FOP",
+      "conid": "6604746",
+      "symbol": "LTS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LADENBURG THALMANN FINANCIAL",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTS",
+      "sec_type_used": "FUT",
+      "conid": "6604746",
+      "symbol": "LTS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LADENBURG THALMANN FINANCIAL",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTS",
+      "sec_type_used": "IND",
+      "conid": "6604746",
+      "symbol": "LTS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LADENBURG THALMANN FINANCIAL",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "LTS",
+      "sec_type_used": "OPT",
+      "conid": "6604746",
+      "symbol": "LTS",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "LADENBURG THALMANN FINANCIAL",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGHO",
+      "sec_type_used": "FOP",
+      "conid": "53019364",
+      "symbol": "NGHO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "DOLLR4LOT",
+      "company_name": "NEW GENERATION HOLDINGS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "DOLLR4LOT;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGHO",
+      "sec_type_used": "FUT",
+      "conid": "53019364",
+      "symbol": "NGHO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "DOLLR4LOT",
+      "company_name": "NEW GENERATION HOLDINGS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "DOLLR4LOT;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGHO",
+      "sec_type_used": "IND",
+      "conid": "53019364",
+      "symbol": "NGHO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "DOLLR4LOT",
+      "company_name": "NEW GENERATION HOLDINGS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "DOLLR4LOT;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGHO",
+      "sec_type_used": "OPT",
+      "conid": "53019364",
+      "symbol": "NGHO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "DOLLR4LOT",
+      "company_name": "NEW GENERATION HOLDINGS INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "DOLLR4LOT;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGO",
+      "sec_type_used": "FOP",
+      "conid": "150540628",
+      "symbol": "NGO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "NEWLOX GOLD VENTURES CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGO",
+      "sec_type_used": "FUT",
+      "conid": "150540628",
+      "symbol": "NGO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "NEWLOX GOLD VENTURES CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGO",
+      "sec_type_used": "IND",
+      "conid": "150540628",
+      "symbol": "NGO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "NEWLOX GOLD VENTURES CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGO",
+      "sec_type_used": "OPT",
+      "conid": "150540628",
+      "symbol": "NGO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "NEWLOX GOLD VENTURES CORP",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGP",
+      "sec_type_used": "FOP",
+      "conid": "732764737",
+      "symbol": "NGP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FORECASTX",
+      "company_name": "US Natural Gas Production",
+      "sections": [
+        {
+          "secType": "EC"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGP",
+      "sec_type_used": "FUT",
+      "conid": "732764737",
+      "symbol": "NGP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FORECASTX",
+      "company_name": "US Natural Gas Production",
+      "sections": [
+        {
+          "secType": "EC"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGP",
+      "sec_type_used": "IND",
+      "conid": "732764737",
+      "symbol": "NGP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FORECASTX",
+      "company_name": "US Natural Gas Production",
+      "sections": [
+        {
+          "secType": "EC"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NGP",
+      "sec_type_used": "OPT",
+      "conid": "732764737",
+      "symbol": "NGP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FORECASTX",
+      "company_name": "US Natural Gas Production",
+      "sections": [
+        {
+          "secType": "EC"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NHP",
+      "sec_type_used": "FOP",
+      "conid": "876162846",
+      "symbol": "NHP",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "NATIONAL HEALTHCARE PROPERTI",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "FOP",
+      "conid": "395173126",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "NITRO SOFTWARE LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "FOP",
+      "conid": "240609979",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VSE",
+      "company_name": "NINTENDO CO LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "FOP",
+      "conid": "160213087",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TASE",
+      "company_name": "NETO ME HOLDINGS LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "TASE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "FUT",
+      "conid": "395173126",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "NITRO SOFTWARE LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "FUT",
+      "conid": "240609979",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VSE",
+      "company_name": "NINTENDO CO LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "FUT",
+      "conid": "160213087",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TASE",
+      "company_name": "NETO ME HOLDINGS LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "TASE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "IND",
+      "conid": "395173126",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "NITRO SOFTWARE LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "IND",
+      "conid": "240609979",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VSE",
+      "company_name": "NINTENDO CO LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "IND",
+      "conid": "160213087",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TASE",
+      "company_name": "NETO ME HOLDINGS LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "TASE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "OPT",
+      "conid": "395173126",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "NITRO SOFTWARE LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "OPT",
+      "conid": "240609979",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VSE",
+      "company_name": "NINTENDO CO LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "IOPT"
+        }
+      ]
+    },
+    {
+      "source_symbol": "NTO",
+      "sec_type_used": "OPT",
+      "conid": "160213087",
+      "symbol": "NTO",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TASE",
+      "company_name": "NETO ME HOLDINGS LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "TASE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "PCM",
+      "sec_type_used": "FOP",
+      "conid": "44559212",
+      "symbol": "PCM",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "PCM FUND INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "PCM",
+      "sec_type_used": "FUT",
+      "conid": "44559212",
+      "symbol": "PCM",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "PCM FUND INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "PCM",
+      "sec_type_used": "IND",
+      "conid": "44559212",
+      "symbol": "PCM",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "PCM FUND INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "PCM",
+      "sec_type_used": "OPT",
+      "conid": "44559212",
+      "symbol": "PCM",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYSE",
+      "company_name": "PCM FUND INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "PPE",
+      "sec_type_used": "FOP",
+      "conid": "297281998",
+      "symbol": "PPE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "PEOPLEIN LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "PPE",
+      "sec_type_used": "FUT",
+      "conid": "297281998",
+      "symbol": "PPE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "PEOPLEIN LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "PPE",
+      "sec_type_used": "IND",
+      "conid": "297281998",
+      "symbol": "PPE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "PEOPLEIN LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "PPE",
+      "sec_type_used": "OPT",
+      "conid": "297281998",
+      "symbol": "PPE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "PEOPLEIN LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGEA",
+      "sec_type_used": "FOP",
+      "conid": "540920700",
+      "symbol": "UGEA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYMEX",
+      "company_name": "CME CBL Global Emissions Offset Futures Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "NYMEX;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGEA",
+      "sec_type_used": "FUT",
+      "conid": "540920700",
+      "symbol": "UGEA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYMEX",
+      "company_name": "CME CBL Global Emissions Offset Futures Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "NYMEX;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGEA",
+      "sec_type_used": "IND",
+      "conid": "540920700",
+      "symbol": "UGEA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYMEX",
+      "company_name": "CME CBL Global Emissions Offset Futures Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "NYMEX;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGEA",
+      "sec_type_used": "OPT",
+      "conid": "540920700",
+      "symbol": "UGEA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NYMEX",
+      "company_name": "CME CBL Global Emissions Offset Futures Index",
+      "sections": [
+        {
+          "secType": "IND",
+          "exchange": "NYMEX;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGE",
+      "sec_type_used": "FOP",
+      "conid": "42808815",
+      "symbol": "UGE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "PROSHARES ULTRA CONSUMER STA",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;GEMINI;IBUSOPT;NASDAQBX;NASDAQOM;PHLX;PSE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGE",
+      "sec_type_used": "FOP",
+      "conid": "396329067",
+      "symbol": "UGE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "UGE INTERNATIONAL LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGE",
+      "sec_type_used": "FUT",
+      "conid": "42808815",
+      "symbol": "UGE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "PROSHARES ULTRA CONSUMER STA",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;GEMINI;IBUSOPT;NASDAQBX;NASDAQOM;PHLX;PSE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGE",
+      "sec_type_used": "FUT",
+      "conid": "396329067",
+      "symbol": "UGE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "UGE INTERNATIONAL LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGE",
+      "sec_type_used": "IND",
+      "conid": "42808815",
+      "symbol": "UGE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "PROSHARES ULTRA CONSUMER STA",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;GEMINI;IBUSOPT;NASDAQBX;NASDAQOM;PHLX;PSE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGE",
+      "sec_type_used": "IND",
+      "conid": "396329067",
+      "symbol": "UGE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "UGE INTERNATIONAL LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGE",
+      "sec_type_used": "OPT",
+      "conid": "42808815",
+      "symbol": "UGE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "PROSHARES ULTRA CONSUMER STA",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;GEMINI;IBUSOPT;NASDAQBX;NASDAQOM;PHLX;PSE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UGE",
+      "sec_type_used": "OPT",
+      "conid": "396329067",
+      "symbol": "UGE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "UGE INTERNATIONAL LTD",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UNE",
+      "sec_type_used": "FOP",
+      "conid": "832145907",
+      "symbol": "UNE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "FIRST US BANCSHARES INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UNE",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UNE",
+      "sec_type_used": "FUT",
+      "conid": "832145907",
+      "symbol": "UNE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "FIRST US BANCSHARES INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UNE",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UNE",
+      "sec_type_used": "IND",
+      "conid": "832145907",
+      "symbol": "UNE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "FIRST US BANCSHARES INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UNE",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UNE",
+      "sec_type_used": "OPT",
+      "conid": "832145907",
+      "symbol": "UNE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "FWB2",
+      "company_name": "FIRST US BANCSHARES INC",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "FWB2;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "UNE",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "FOP",
+      "conid": "74262459",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "PROSHARES ULTRA REAL ESTATE",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;IBUSOPT;ISE;MEMX;MERCURY;NASDAQBX;NASDAQOM;PHLX;PSE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "FOP",
+      "conid": "37060554",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "UR-ENERGY INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "FOP",
+      "conid": "9742165",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "UMWELTKONT.RENEW.ENERGY",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "FUT",
+      "conid": "74262459",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "PROSHARES ULTRA REAL ESTATE",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;IBUSOPT;ISE;MEMX;MERCURY;NASDAQBX;NASDAQOM;PHLX;PSE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "FUT",
+      "conid": "37060554",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "UR-ENERGY INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "FUT",
+      "conid": "9742165",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "UMWELTKONT.RENEW.ENERGY",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "IND",
+      "conid": "74262459",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "PROSHARES ULTRA REAL ESTATE",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;IBUSOPT;ISE;MEMX;MERCURY;NASDAQBX;NASDAQOM;PHLX;PSE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "IND",
+      "conid": "37060554",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "UR-ENERGY INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "IND",
+      "conid": "9742165",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "UMWELTKONT.RENEW.ENERGY",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "OPT",
+      "conid": "74262459",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "PROSHARES ULTRA REAL ESTATE",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;IBUSOPT;ISE;MEMX;MERCURY;NASDAQBX;NASDAQOM;PHLX;PSE"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "OPT",
+      "conid": "37060554",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "TSE",
+      "company_name": "UR-ENERGY INC",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "URE",
+      "sec_type_used": "OPT",
+      "conid": "9742165",
+      "symbol": "URE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "UMWELTKONT.RENEW.ENERGY",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEA",
+      "sec_type_used": "FOP",
+      "conid": "571281683",
+      "symbol": "USEA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "UNITED MARITIME CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEA",
+      "sec_type_used": "FUT",
+      "conid": "571281683",
+      "symbol": "USEA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "UNITED MARITIME CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEA",
+      "sec_type_used": "IND",
+      "conid": "571281683",
+      "symbol": "USEA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "UNITED MARITIME CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEA",
+      "sec_type_used": "OPT",
+      "conid": "571281683",
+      "symbol": "USEA",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "UNITED MARITIME CORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEB",
+      "sec_type_used": "FOP",
+      "conid": "780019651",
+      "symbol": "USEB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHARES USD CB EA UCITS",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEB",
+      "sec_type_used": "FUT",
+      "conid": "780019651",
+      "symbol": "USEB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHARES USD CB EA UCITS",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEB",
+      "sec_type_used": "IND",
+      "conid": "780019651",
+      "symbol": "USEB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHARES USD CB EA UCITS",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEB",
+      "sec_type_used": "OPT",
+      "conid": "780019651",
+      "symbol": "USEB",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHARES USD CB EA UCITS",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEC",
+      "sec_type_used": "FOP",
+      "conid": "845619312",
+      "symbol": "USEC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "AEB",
+      "company_name": "ISHARES USD CB EA UCITS",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEC",
+      "sec_type_used": "FUT",
+      "conid": "845619312",
+      "symbol": "USEC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "AEB",
+      "company_name": "ISHARES USD CB EA UCITS",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEC",
+      "sec_type_used": "IND",
+      "conid": "845619312",
+      "symbol": "USEC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "AEB",
+      "company_name": "ISHARES USD CB EA UCITS",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEC",
+      "sec_type_used": "OPT",
+      "conid": "845619312",
+      "symbol": "USEC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "AEB",
+      "company_name": "ISHARES USD CB EA UCITS",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "FOP",
+      "conid": "732438786",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "FOP",
+      "conid": "719710567",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "FOP",
+      "conid": "719414767",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSEETF",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "FUT",
+      "conid": "732438786",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "FUT",
+      "conid": "719710567",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "FUT",
+      "conid": "719414767",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSEETF",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "IND",
+      "conid": "732438786",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "IND",
+      "conid": "719710567",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "IND",
+      "conid": "719414767",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSEETF",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "OPT",
+      "conid": "732438786",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "OPT",
+      "conid": "719710567",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "IBIS2",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEE",
+      "sec_type_used": "OPT",
+      "conid": "719414767",
+      "symbol": "USEE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "LSEETF",
+      "company_name": "ISHRES US EQ ENHANCE AC ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USE",
+      "sec_type_used": "FOP",
+      "conid": "629283467",
+      "symbol": "USE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "USCF ENERGY CMDTY ABS RTN",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USE",
+      "sec_type_used": "FOP",
+      "conid": "4653797",
+      "symbol": "USE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "EROTIK-ABWICKLUNGSGESELLSCHA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USE",
+      "sec_type_used": "FUT",
+      "conid": "629283467",
+      "symbol": "USE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "USCF ENERGY CMDTY ABS RTN",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USE",
+      "sec_type_used": "FUT",
+      "conid": "4653797",
+      "symbol": "USE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "EROTIK-ABWICKLUNGSGESELLSCHA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USE",
+      "sec_type_used": "IND",
+      "conid": "629283467",
+      "symbol": "USE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "USCF ENERGY CMDTY ABS RTN",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USE",
+      "sec_type_used": "IND",
+      "conid": "4653797",
+      "symbol": "USE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "EROTIK-ABWICKLUNGSGESELLSCHA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USE",
+      "sec_type_used": "OPT",
+      "conid": "629283467",
+      "symbol": "USE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "USCF ENERGY CMDTY ABS RTN",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USE",
+      "sec_type_used": "OPT",
+      "conid": "4653797",
+      "symbol": "USE",
+      "sec_type": null,
+      "exchange": null,
+      "description": "VALUE",
+      "company_name": "EROTIK-ABWICKLUNGSGESELLSCHA",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "VALUE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEW",
+      "sec_type_used": "FOP",
+      "conid": "839174127",
+      "symbol": "USEW",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BATS",
+      "company_name": "CAMBRIA US EW ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEW",
+      "sec_type_used": "FUT",
+      "conid": "839174127",
+      "symbol": "USEW",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BATS",
+      "company_name": "CAMBRIA US EW ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEW",
+      "sec_type_used": "IND",
+      "conid": "839174127",
+      "symbol": "USEW",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BATS",
+      "company_name": "CAMBRIA US EW ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USEW",
+      "sec_type_used": "OPT",
+      "conid": "839174127",
+      "symbol": "USEW",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BATS",
+      "company_name": "CAMBRIA US EW ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMC",
+      "sec_type_used": "FOP",
+      "conid": "292179090",
+      "symbol": "USMC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "PRINCIPAL US MEGA-CAP ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;BATS;CBOE;CBOE2;EDGX;IBUSOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "519070544"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMC",
+      "sec_type_used": "FOP",
+      "conid": "782964187",
+      "symbol": "USMC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "FRANKLIN US MEGA CAP ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMC",
+      "sec_type_used": "FUT",
+      "conid": "292179090",
+      "symbol": "USMC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "PRINCIPAL US MEGA-CAP ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;BATS;CBOE;CBOE2;EDGX;IBUSOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "519070544"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMC",
+      "sec_type_used": "FUT",
+      "conid": "782964187",
+      "symbol": "USMC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "FRANKLIN US MEGA CAP ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMC",
+      "sec_type_used": "IND",
+      "conid": "292179090",
+      "symbol": "USMC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "PRINCIPAL US MEGA-CAP ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;BATS;CBOE;CBOE2;EDGX;IBUSOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "519070544"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMC",
+      "sec_type_used": "IND",
+      "conid": "782964187",
+      "symbol": "USMC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "FRANKLIN US MEGA CAP ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMC",
+      "sec_type_used": "OPT",
+      "conid": "292179090",
+      "symbol": "USMC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "NASDAQ",
+      "company_name": "PRINCIPAL US MEGA-CAP ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;SEP26;DEC26",
+          "exchange": "SMART;BATS;CBOE;CBOE2;EDGX;IBUSOPT"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "519070544"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMC",
+      "sec_type_used": "OPT",
+      "conid": "782964187",
+      "symbol": "USMC",
+      "sec_type": null,
+      "exchange": null,
+      "description": "EBS",
+      "company_name": "FRANKLIN US MEGA CAP ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMD",
+      "sec_type_used": "FOP",
+      "conid": "849154027",
+      "symbol": "USMD",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "COREVALUES AMER F TECH ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMD",
+      "sec_type_used": "FUT",
+      "conid": "849154027",
+      "symbol": "USMD",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "COREVALUES AMER F TECH ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMD",
+      "sec_type_used": "IND",
+      "conid": "849154027",
+      "symbol": "USMD",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "COREVALUES AMER F TECH ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMD",
+      "sec_type_used": "OPT",
+      "conid": "849154027",
+      "symbol": "USMD",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ARCA",
+      "company_name": "COREVALUES AMER F TECH ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USM",
+      "sec_type_used": "FOP",
+      "conid": "868124699",
+      "symbol": "USM",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "UNION STAR METALS LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USM",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USM",
+      "sec_type_used": "FUT",
+      "conid": "868124699",
+      "symbol": "USM",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "UNION STAR METALS LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USM",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USM",
+      "sec_type_used": "IND",
+      "conid": "868124699",
+      "symbol": "USM",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "UNION STAR METALS LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USM",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USM",
+      "sec_type_used": "OPT",
+      "conid": "868124699",
+      "symbol": "USM",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "UNION STAR METALS LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USM",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMT",
+      "sec_type_used": "FOP",
+      "conid": "416034474",
+      "symbol": "USMT",
+      "sec_type": null,
+      "exchange": null,
+      "description": "PINK",
+      "company_name": "US METRO BANCORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMT",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMT",
+      "sec_type_used": "FUT",
+      "conid": "416034474",
+      "symbol": "USMT",
+      "sec_type": null,
+      "exchange": null,
+      "description": "PINK",
+      "company_name": "US METRO BANCORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMT",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMT",
+      "sec_type_used": "IND",
+      "conid": "416034474",
+      "symbol": "USMT",
+      "sec_type": null,
+      "exchange": null,
+      "description": "PINK",
+      "company_name": "US METRO BANCORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMT",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMT",
+      "sec_type_used": "OPT",
+      "conid": "416034474",
+      "symbol": "USMT",
+      "sec_type": null,
+      "exchange": null,
+      "description": "PINK",
+      "company_name": "US METRO BANCORP",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "USMT",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "FOP",
+      "conid": "47202521",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BATS",
+      "company_name": "ISHARES MSCI CHILE ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;OCT26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;IBUSOPT;ISE;MERCURY;MIAX;PEARL;PHLX;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "134771789"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "FOP",
+      "conid": "268960311",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "ECHO INVESTMENT S.A.",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "FOP",
+      "conid": "447262512",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "ECHELON RESOURCES LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "FOP",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "FUT",
+      "conid": "47202521",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BATS",
+      "company_name": "ISHARES MSCI CHILE ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;OCT26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;IBUSOPT;ISE;MERCURY;MIAX;PEARL;PHLX;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "134771789"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "FUT",
+      "conid": "268960311",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "ECHO INVESTMENT S.A.",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "FUT",
+      "conid": "447262512",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "ECHELON RESOURCES LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "FUT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "IND",
+      "conid": "47202521",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BATS",
+      "company_name": "ISHARES MSCI CHILE ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;OCT26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;IBUSOPT;ISE;MERCURY;MIAX;PEARL;PHLX;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "134771789"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "IND",
+      "conid": "268960311",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "ECHO INVESTMENT S.A.",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "IND",
+      "conid": "447262512",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "ECHELON RESOURCES LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "IND",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "OPT",
+      "conid": "47202521",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "BATS",
+      "company_name": "ISHARES MSCI CHILE ETF",
+      "sections": [
+        {
+          "secType": "STK"
+        },
+        {
+          "secType": "OPT",
+          "months": "MAY26;JUN26;AUG26;OCT26;NOV26",
+          "exchange": "SMART;AMEX;BATS;BOX;CBOE;CBOE2;EDGX;EMERALD;IBUSOPT;ISE;MERCURY;MIAX;PEARL;PHLX;SAPPHIRE"
+        },
+        {
+          "secType": "CFD",
+          "exchange": "SMART",
+          "conid": "134771789"
+        },
+        {
+          "secType": "BAG"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "OPT",
+      "conid": "268960311",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "WSE",
+      "company_name": "ECHO INVESTMENT S.A.",
+      "sections": [
+        {
+          "secType": "STK",
+          "exchange": "WSE;"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "OPT",
+      "conid": "447262512",
+      "symbol": "ECH",
+      "sec_type": null,
+      "exchange": null,
+      "description": "ASX",
+      "company_name": "ECHELON RESOURCES LTD",
+      "sections": [
+        {
+          "secType": "STK"
+        }
+      ]
+    },
+    {
+      "source_symbol": "ECH",
+      "sec_type_used": "OPT",
+      "conid": "2147483647",
+      "symbol": null,
+      "sec_type": null,
+      "exchange": null,
+      "description": null,
+      "company_name": null,
+      "sections": [
+        {
+          "secType": "BOND"
+        }
+      ]
+    }
+  ]
+}

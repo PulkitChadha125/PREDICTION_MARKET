@@ -16,6 +16,8 @@ This is session-based and mainly suitable for local testing / prototyping.
    - GET  /                       -> health/root message
    - GET  /auth/status            -> check IBKR session
    - GET  /events/search          -> search underlyings/topics
+   - GET  /events/symbols         -> all ForecastEx product symbols (category tree)
+   - GET  /events/topics/all      -> same as /events/symbols
    - GET  /events/chain           -> get normalized YES/NO chain
    - POST /orders/yes             -> place BUY YES order
    - POST /orders/no              -> place BUY NO order

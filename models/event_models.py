@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 
 class EventTopic(BaseModel):
@@ -107,6 +107,47 @@ class EventChainResponse(BaseModel):
     month: str
     exchange: str
     contracts: list[StrikeContractPair]
+
+
+class EventChainRequest(BaseModel):
+    """Input model for chain building from Swagger request body."""
+
+    symbol: str | None = Field(
+        default=None,
+        description="Optional underlying symbol, e.g. UHSFO or FF.",
+        examples=["UHSFO"],
+    )
+    conid: str | None = Field(
+        default=None,
+        description="Optional known topic conid for direct chain lookup.",
+        examples=["845634818"],
+    )
+    month: str = Field(
+        ...,
+        description="Contract month in YYYYMM format.",
+        examples=["202604"],
+    )
+    exchange: str = Field(
+        ...,
+        description="Exchange code, usually FORECASTX for prediction markets.",
+        examples=["FORECASTX"],
+    )
+    sec_type: str = Field(
+        default="IND",
+        description="Security type for symbol discovery path.",
+        examples=["IND"],
+    )
+    sectype: str = Field(
+        default="OPT",
+        description="Contract sec type used for strikes and contract info.",
+        examples=["OPT"],
+    )
+
+    @model_validator(mode="after")
+    def validate_symbol_or_conid(self) -> "EventChainRequest":
+        if not self.symbol and not self.conid:
+            raise ValueError("Provide at least one of 'symbol' or 'conid'.")
+        return self
 
 
 class ContractInfoResponse(BaseModel):
