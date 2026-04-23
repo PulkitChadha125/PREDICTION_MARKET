@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 
+from datetime import date, datetime
+from pathlib import Path
+
+from openpyxl import load_workbook
 from fastapi import APIRouter, HTTPException, Query
 
 from models.event_models import (
@@ -19,6 +23,9 @@ from services.ibkr_client import IBKRClient, IBKRClientError
 
 router = APIRouter(prefix="/events", tags=["events"])
 event_service = EventService(IBKRClient())
+PAIRS_SYMBOLS_XLSX = (
+    Path(__file__).resolve().parent.parent / "prediction_market_symbols_from_pairs.xlsx"
+)
 
 
 def _sec_type_candidates(sec_type: str) -> list[str]:
@@ -303,6 +310,73 @@ def get_strikes(
         )
     except IBKRClientError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/pairs/symbols", tags=["events"])
+def get_pairs_symbols_xlsx_json(
+    sheet_name: str | None = Query(
+        default=None,
+        description="Optional sheet name. Defaults to the workbook active sheet.",
+    ),
+) -> dict[str, object]:
+    """Return `prediction_market_symbols_from_pairs.xlsx` rows as JSON."""
+    if not PAIRS_SYMBOLS_XLSX.exists():
+        raise HTTPException(
+            status_code=404,
+            detail=f"File not found: {PAIRS_SYMBOLS_XLSX.name}",
+        )
+
+    try:
+        workbook = load_workbook(PAIRS_SYMBOLS_XLSX, data_only=True, read_only=True)
+        sheet = workbook[sheet_name] if sheet_name else workbook.active
+    except KeyError as exc:
+        available = [name for name in workbook.sheetnames]
+        raise HTTPException(
+            status_code=400,
+            detail=f"Sheet '{sheet_name}' not found. Available sheets: {available}",
+        ) from exc
+    except Exception as exc:  # pragma: no cover
+        raise HTTPException(status_code=500, detail=f"Failed to read xlsx: {exc}") from exc
+
+    rows_iter = sheet.iter_rows(values_only=True)
+    header_row = next(rows_iter, None)
+    if not header_row:
+        return {
+            "status": "success",
+            "file": PAIRS_SYMBOLS_XLSX.name,
+            "sheet": sheet.title,
+            "total_rows": 0,
+            "rows": [],
+        }
+
+    headers = [str(value).strip() if value is not None else "" for value in header_row]
+    data_rows: list[dict[str, object | None]] = []
+
+    for row in rows_iter:
+        if row is None:
+            continue
+        record: dict[str, object | None] = {}
+        is_empty = True
+        for idx, cell_value in enumerate(row):
+            header = headers[idx] if idx < len(headers) and headers[idx] else f"column_{idx + 1}"
+            value: object | None = cell_value
+            if isinstance(value, datetime):
+                value = value.isoformat()
+            elif isinstance(value, date):
+                value = value.isoformat()
+            if value not in (None, ""):
+                is_empty = False
+            record[header] = value
+        if not is_empty:
+            data_rows.append(record)
+
+    return {
+        "status": "success",
+        "file": PAIRS_SYMBOLS_XLSX.name,
+        "sheet": sheet.title,
+        "total_rows": len(data_rows),
+        "rows": data_rows,
+    }
 
 
 @router.get("/contracts", response_model=ContractInfoResponse)

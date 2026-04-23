@@ -65,6 +65,7 @@ Useful pages:
 - `GET /events/topics/all`
 - `GET /events/topics/console`
 - `GET /events/discover`
+- `GET /events/pairs/symbols` (returns `prediction_market_symbols_from_pairs.xlsx` as JSON)
 - `GET /events/strikes`
 - `GET /events/contracts`
 - `GET /events/chain`
@@ -95,22 +96,29 @@ Use one value from `accounts_response.accounts` as `REAL_ACCOUNT_ID`.
 
 ```powershell
 curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=FF&exchange=CME"
-curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHCLT&exchange=FORECASTX"
+curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&exchange=FORECASTX"
 
-curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=YXLBT&sec_type=IND&month=202604&exchange=FORECASTX&sectype=OPT&conid=851808907"
+curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHSFO&sec_type=IND&month=20260423&exchange=FORECASTX&sectype=OPT&conid=853400816"
 ```
 For CME-style event options, pass `sec_type=FOP` (or `FUT`) and exchange `CME`/`CBT`:
 ```powershell
-curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=KCD10&sec_type=FOP&exchange=CME"
+curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&sec_type=FOP&exchange=FORECASTEX"
 ```
 You can call `/events/chain` in two ways:
 - By `symbol` (discovery flow): provide `symbol`, `month`, `exchange`
 - By `conid` (direct fast flow): provide `conid`, `month`, `exchange` (symbol optional label)
 - Or use Swagger-friendly body endpoint `POST /events/chain/check`
+
+### 2b) Get pairs Excel data as JSON
+
+```powershell
+curl.exe -s "http://127.0.0.1:8000/events/pairs/symbols"
+curl.exe -s "http://127.0.0.1:8000/events/pairs/symbols?sheet_name=Sheet1"
+```
 ### 3) Place YES / NO
 
 ```powershell
-curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Type: application/json" -d '{"account_id":"U25234273","conid":"876146067","quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
+curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Type: application/json" -d '{"account_id":"DUP766324","conid":"875861841","quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
 curl.exe -s -X POST "http://127.0.0.1:8000/orders/no"  -H "Content-Type: application/json" -d '{"account_id":"873489349","conid":873489349,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
 ```
 
