@@ -160,3 +160,21 @@ class ContractInfoResponse(BaseModel):
     exchange: str
     strike: float
     contracts: list[dict[str, Any]]
+
+
+class MarketQuoteItem(BaseModel):
+    """Normalized market quote fields for one contract conid."""
+
+    conid: int
+    ltp: float | None = None
+    bid: float | None = None
+    ask: float | None = None
+    raw: dict[str, Any] = Field(default_factory=dict)
+
+
+class MarketQuoteResponse(BaseModel):
+    """Quote snapshot response for one or multiple conids."""
+
+    status: str = "success"
+    total: int
+    quotes: list[MarketQuoteItem]

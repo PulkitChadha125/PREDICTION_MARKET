@@ -16,6 +16,8 @@ from models.event_models import (
     ContractInfoResponse,
     EventChainResponse,
     EventTopicSearchResponse,
+    MarketQuoteItem,
+    MarketQuoteResponse,
     StrikeListResponse,
 )
 from services.event_service import EventService
@@ -119,6 +121,44 @@ def _build_chain_response(
         exchange=exchange,
         contracts=contracts,
     )
+
+
+def _to_optional_float(value: object) -> float | None:
+    """Convert IBKR snapshot numeric field to float, handling N/A-like values."""
+    if value is None:
+        return None
+    if isinstance(value, str):
+        cleaned = value.strip().upper()
+        if not cleaned or cleaned in {"N/A", "-"}:
+            return None
+        value = cleaned
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _quote_field_count(row: dict[str, object]) -> int:
+    """Count populated quote fields among LTP/BID/ASK for row quality ranking."""
+    populated = 0
+    for field in ("31", "84", "86"):
+        if _to_optional_float(row.get(field)) is not None:
+            populated += 1
+    return populated
+
+
+def _pick_richer_row(
+    current: dict[str, object] | None, candidate: dict[str, object]
+) -> dict[str, object]:
+    """Pick snapshot row with richer quote payload for same conid."""
+    if current is None:
+        return candidate
+
+    current_score = (_quote_field_count(current), len(current))
+    candidate_score = (_quote_field_count(candidate), len(candidate))
+    if candidate_score > current_score:
+        return candidate
+    return current
 
 
 @router.get("/search", response_model=EventTopicSearchResponse)
@@ -506,3 +546,110 @@ def discover_underlyings(
         )
     except IBKRClientError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/quotes", response_model=MarketQuoteResponse)
+def get_quotes(
+    conids: str = Query(
+        ...,
+        description="Single conid or comma-separated conids, e.g. 877309547,877309550",
+    ),
+    fields: str = Query(
+        "31,84,86",
+        description="IBKR marketdata fields. Defaults to 31(LTP),84(BID),86(ASK).",
+    ),
+) -> MarketQuoteResponse:
+    """Fetch quote snapshot (LTP/BID/ASK) for one or multiple contract conids."""
+    parsed_conids = [chunk.strip() for chunk in conids.split(",") if chunk.strip()]
+    if not parsed_conids:
+        raise HTTPException(status_code=422, detail="Provide at least one conid.")
+
+    unique_conids = list(dict.fromkeys(parsed_conids))
+    parsed_conid_ints: list[int] = []
+    try:
+        parsed_conid_ints = [int(conid) for conid in unique_conids]
+        snapshot_rows = event_service.client.get_market_snapshot(
+            conids=parsed_conid_ints,
+            fields=fields,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail="All conids must be integers.") from exc
+    except IBKRClientError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    rows_by_conid: dict[int, dict[str, object]] = {}
+    for row in snapshot_rows:
+        if not isinstance(row, dict):
+            continue
+        conid_val = row.get("conid")
+        try:
+            conid_int = int(conid_val)  # type: ignore[arg-type]
+        except (TypeError, ValueError):
+            continue
+        rows_by_conid[conid_int] = _pick_richer_row(rows_by_conid.get(conid_int), row)
+
+    # IBKR snapshot is often sparse on first fetch; retry missing rows in batch, then one-by-one.
+    def _missing_quote(conid_int: int) -> bool:
+        row = rows_by_conid.get(conid_int, {})
+        return (
+            _to_optional_float(row.get("31")) is None
+            and _to_optional_float(row.get("84")) is None
+            and _to_optional_float(row.get("86")) is None
+        )
+
+    missing_conids = [cid for cid in parsed_conid_ints if _missing_quote(cid)]
+    if missing_conids:
+        try:
+            retry_rows = event_service.client.get_market_snapshot(
+                conids=missing_conids,
+                fields=fields,
+            )
+            for row in retry_rows:
+                if not isinstance(row, dict):
+                    continue
+                conid_val = row.get("conid")
+                try:
+                    conid_int = int(conid_val)  # type: ignore[arg-type]
+                except (TypeError, ValueError):
+                    continue
+                rows_by_conid[conid_int] = _pick_richer_row(
+                    rows_by_conid.get(conid_int), row
+                )
+        except IBKRClientError:
+            # Keep best-effort data from initial snapshot.
+            pass
+
+    missing_conids = [cid for cid in parsed_conid_ints if _missing_quote(cid)]
+    for conid_int in missing_conids:
+        try:
+            single_rows = event_service.client.get_market_snapshot(
+                conids=[conid_int],
+                fields=fields,
+            )
+        except IBKRClientError:
+            continue
+        for row in single_rows:
+            if not isinstance(row, dict):
+                continue
+            conid_val = row.get("conid")
+            try:
+                row_conid = int(conid_val)  # type: ignore[arg-type]
+            except (TypeError, ValueError):
+                continue
+            rows_by_conid[row_conid] = _pick_richer_row(rows_by_conid.get(row_conid), row)
+
+    quotes: list[MarketQuoteItem] = []
+    for conid in unique_conids:
+        conid_int = int(conid)
+        raw = rows_by_conid.get(conid_int, {})
+        quotes.append(
+            MarketQuoteItem(
+                conid=conid_int,
+                ltp=_to_optional_float(raw.get("31")),
+                bid=_to_optional_float(raw.get("84")),
+                ask=_to_optional_float(raw.get("86")),
+                raw=raw,
+            )
+        )
+
+    return MarketQuoteResponse(status="success", total=len(quotes), quotes=quotes)

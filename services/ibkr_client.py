@@ -45,6 +45,29 @@ class IBKRClient:
             return {}
         except requests.exceptions.HTTPError as exc:
             text = exc.response.text if exc.response is not None else str(exc)
+            if self._should_retry_for_unauthorized(exc.response, endpoint):
+                logger.warning(
+                    "Detected unauthorized session for %s %s. Reauthenticating and retrying once.",
+                    method,
+                    endpoint,
+                )
+                self.initialize_brokerage_session()
+                try:
+                    retry_response = self._raw_request(
+                        method=method, endpoint=endpoint, **kwargs
+                    )
+                    retry_response.raise_for_status()
+                    if retry_response.text.strip():
+                        return retry_response.json()
+                    return {}
+                except requests.exceptions.HTTPError as retry_exc:
+                    detail = self._format_http_error_message(
+                        retry_exc.response, fallback=str(retry_exc)
+                    )
+                    logger.error(
+                        "IBKR HTTP retry error on %s %s: %s", method, endpoint, detail
+                    )
+                    raise IBKRClientError(f"IBKR HTTP error: {detail}") from retry_exc
             # Common IBKR session issue: bridge is not initialized.
             if self._should_retry_for_no_bridge(exc.response, endpoint):
                 logger.warning(
@@ -135,6 +158,16 @@ class IBKRClient:
             return False
         message = response.text.lower()
         return "no bridge" in message
+
+    def _should_retry_for_unauthorized(
+        self, response: requests.Response | None, endpoint: str
+    ) -> bool:
+        """Retry iServer endpoints once when gateway session returns 401."""
+        if response is None:
+            return False
+        if not endpoint.startswith("/iserver/"):
+            return False
+        return response.status_code == 401
 
     def initialize_brokerage_session(self) -> None:
         """

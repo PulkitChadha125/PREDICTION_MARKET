@@ -49,9 +49,11 @@ Useful pages:
    `GET /events/topics/console?symbols=UHSFO&exchange=FORECASTX`
 3. Get YES/NO contract conids  
    `GET /events/chain?...`
-4. Place order  
+4. Get live quote snapshot (LTP/BID/ASK) for one or many conids  
+   `GET /events/quotes?conids=...`
+5. Place order  
    `POST /orders/yes` or `POST /orders/no`
-5. Track orders  
+6. Track orders  
    `GET /orders/live`
 
 ## Endpoint Overview
@@ -69,6 +71,7 @@ Useful pages:
 - `GET /events/strikes`
 - `GET /events/contracts`
 - `GET /events/chain`
+- `GET /events/quotes`
 - `POST /events/chain/check` (Swagger body input for your own values)
 
 ### Orders
@@ -98,7 +101,7 @@ Use one value from `accounts_response.accounts` as `REAL_ACCOUNT_ID`.
 curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=FF&exchange=CME"
 curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&exchange=FORECASTX"
 
-curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHSFO&sec_type=IND&month=20260423&exchange=FORECASTX&sectype=OPT&conid=853400816"
+curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHSFO&sec_type=IND&month=202604exchange=FORECASTX&sectype=OPT&conid=853400816"
 ```
 For CME-style event options, pass `sec_type=FOP` (or `FUT`) and exchange `CME`/`CBT`:
 ```powershell
@@ -115,6 +118,56 @@ You can call `/events/chain` in two ways:
 curl.exe -s "http://127.0.0.1:8000/events/pairs/symbols"
 curl.exe -s "http://127.0.0.1:8000/events/pairs/symbols?sheet_name=Sheet1"
 ```
+### 2c) Get quote snapshot (LTP/BID/ASK)
+
+Use one or multiple conids.  
+Field mapping from IBKR snapshot:
+- `31` => LTP (last traded price)
+- `84` => Bid
+- `86` => Ask
+
+```powershell
+# single conid
+curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547"
+
+# multiple conids
+curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547,877309550,875861841,875861844"
+
+# optional custom IBKR fields (default already includes 31,84,86)
+curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547,877309550&fields=31,84,86,88"
+```
+
+Example response:
+
+```json
+{
+  "status": "success",
+  "total": 2,
+  "quotes": [
+    {
+      "conid": 877309547,
+      "ltp": null,
+      "bid": null,
+      "ask": 0.03,
+      "raw": {
+        "conid": 877309547,
+        "86": "0.03"
+      }
+    },
+    {
+      "conid": 877309550,
+      "ltp": null,
+      "bid": 0.98,
+      "ask": null,
+      "raw": {
+        "conid": 877309550,
+        "84": "0.98"
+      }
+    }
+  ]
+}
+```
+
 ### 3) Place YES / NO
 
 ```powershell
@@ -129,6 +182,14 @@ other ex: curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Typ
 ```powershell
 curl.exe -s "http://127.0.0.1:8000/orders/live?account_id=REAL_ACCOUNT_ID"
 ```
+
+## Swagger Docs Update
+
+After restarting the FastAPI server, the new quote endpoint is available in Swagger:
+
+- Swagger UI: `http://127.0.0.1:8000/docs`
+- ReDoc: `http://127.0.0.1:8000/redoc`
+- New endpoint: `GET /events/quotes`
 
 ## Utility Scripts
 
