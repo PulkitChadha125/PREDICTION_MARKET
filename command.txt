@@ -170,3 +170,22 @@ curl.exe -s "http://127.0.0.1:8000/orders/live?account_id=REAL_ACCOUNT_ID"
 
 :: Confirm IBKR prompt if returned (reply_id from order response)
 curl.exe -s -X POST "http://127.0.0.1:8000/orders/reply" -H "Content-Type: application/json" -d '{"reply_id":"REPLY_ID_FROM_BROKER","confirmed":true}'
+
+::: =============================================================================
+::: New APIs (Historical + Orderbook + Net Positions)
+::: =============================================================================
+
+::: Historical candles/bars for one conid
+curl.exe -s "http://127.0.0.1:8000/orders/historical?conid=875861841&period=1d&bar=5min&outside_rth=true"
+
+::: Optional historical with exchange + start time
+curl.exe -s "http://127.0.0.1:8000/orders/historical?conid=875861841&period=1w&bar=1h&exchange=FORECASTX&outside_rth=true&start_time=20260427-00:00:00"
+
+::: Orderbook with all statuses
+curl.exe -s "http://127.0.0.1:8000/orders/book?account_id=REAL_ACCOUNT_ID&statuses=open,completed,rejected,canceled"
+
+::: Only open + rejected orders
+curl.exe -s "http://127.0.0.1:8000/orders/book?account_id=REAL_ACCOUNT_ID&statuses=open,rejected"
+
+::: Net positions (page 0)
+curl.exe -s "http://127.0.0.1:8000/orders/netpositions?account_id=REAL_ACCOUNT_ID&page=0"

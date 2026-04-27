@@ -169,6 +169,7 @@ class MarketQuoteItem(BaseModel):
     ltp: float | None = None
     bid: float | None = None
     ask: float | None = None
+    volume: float | None = None
     raw: dict[str, Any] = Field(default_factory=dict)
 
 

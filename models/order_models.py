@@ -100,3 +100,33 @@ class LiveOrdersResponse(BaseModel):
     status: str = "success"
     account_id: str
     broker_response: Any
+
+
+class HistoricalDataResponse(BaseModel):
+    """Historical bars response passthrough."""
+
+    status: str = "success"
+    conid: int
+    period: str
+    bar: str
+    broker_response: Any
+
+
+class OrderbookResponse(BaseModel):
+    """Normalized orderbook response with requested statuses."""
+
+    status: str = "success"
+    account_id: str
+    statuses: list[str]
+    total: int
+    orders: list[dict[str, Any]]
+    broker_response: Any
+
+
+class NetPositionsResponse(BaseModel):
+    """Net positions response for account."""
+
+    status: str = "success"
+    account_id: str
+    page: int
+    broker_response: Any

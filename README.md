@@ -53,8 +53,14 @@ Useful pages:
    `GET /events/quotes?conids=...`
 5. Place order  
    `POST /orders/yes` or `POST /orders/no`
-6. Track orders  
+6. Track open/live orders  
    `GET /orders/live`
+7. Fetch historical bars (optional)  
+   `GET /orders/historical?conid=...`
+8. Fetch status-wise orderbook (optional)  
+   `GET /orders/book?account_id=...&statuses=open,completed,rejected,canceled`
+9. Fetch net positions (optional)  
+   `GET /orders/netpositions?account_id=...`
 
 ## Endpoint Overview
 
@@ -82,6 +88,18 @@ Useful pages:
 - `POST /orders/reply`
 - `DELETE /orders/{order_id}`
 - `GET /orders/live`
+- `GET /orders/historical` (historical bars by conid)
+- `GET /orders/book` (orderbook by status: open/completed/rejected/canceled)
+- `GET /orders/netpositions` (portfolio net positions)
+
+## New APIs (Historical + Orderbook + Net Positions)
+
+- `GET /orders/historical`  
+  Fetch historical candles from IBKR for a contract (`conid`, `period`, `bar`, etc.).
+- `GET /orders/book`  
+  Fetch orderbook and filter by status buckets (`open`, `completed`, `rejected`, `canceled`).
+- `GET /orders/netpositions`  
+  Fetch net positions for an account from IBKR portfolio.
 
 ## Windows PowerShell Examples
 
@@ -101,11 +119,11 @@ Use one value from `accounts_response.accounts` as `REAL_ACCOUNT_ID`.
 curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=FF&exchange=CME"
 curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&exchange=FORECASTX"
 
-curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHSFO&sec_type=IND&month=202604exchange=FORECASTX&sectype=OPT&conid=853400816"
+curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHSFO&sec_type=IND&month=202604&exchange=FORECASTX&sectype=OPT&conid=853400816"
 ```
 For CME-style event options, pass `sec_type=FOP` (or `FUT`) and exchange `CME`/`CBT`:
 ```powershell
-curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&sec_type=FOP&exchange=FORECASTEX"
+curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&sec_type=FOP&exchange=FORECASTX"
 ```
 You can call `/events/chain` in two ways:
 - By `symbol` (discovery flow): provide `symbol`, `month`, `exchange`
@@ -118,13 +136,14 @@ You can call `/events/chain` in two ways:
 curl.exe -s "http://127.0.0.1:8000/events/pairs/symbols"
 curl.exe -s "http://127.0.0.1:8000/events/pairs/symbols?sheet_name=Sheet1"
 ```
-### 2c) Get quote snapshot (LTP/BID/ASK)
+### 2c) Get quote snapshot (LTP/BID/ASK/VOLUME)
 
 Use one or multiple conids.  
 Field mapping from IBKR snapshot:
 - `31` => LTP (last traded price)
 - `84` => Bid
 - `86` => Ask
+- `87` => Volume
 
 ```powershell
 # single conid
@@ -133,8 +152,8 @@ curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547"
 # multiple conids
 curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547,877309550,875861841,875861844"
 
-# optional custom IBKR fields (default already includes 31,84,86)
-curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547,877309550&fields=31,84,86,88"
+# optional custom IBKR fields (default already includes 31,84,86,87)
+curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547,877309550&fields=31,84,86,87,88"
 ```
 
 Example response:
@@ -183,13 +202,34 @@ other ex: curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Typ
 curl.exe -s "http://127.0.0.1:8000/orders/live?account_id=REAL_ACCOUNT_ID"
 ```
 
+### 5) Historical bars
+
+```powershell
+curl.exe -s "http://127.0.0.1:8000/orders/historical?conid=877789100&period=1d&bar=1min&outside_rth=true"
+```
+
+### 6) Orderbook by status
+
+```powershell
+curl.exe -s "http://127.0.0.1:8000/orders/book?account_id=REAL_ACCOUNT_ID&statuses=open,completed,rejected,canceled"
+```
+
+### 7) Net positions
+
+```powershell
+curl.exe -s "http://127.0.0.1:8000/orders/netpositions?account_id=REAL_ACCOUNT_ID&page=0"
+```
+
 ## Swagger Docs Update
 
-After restarting the FastAPI server, the new quote endpoint is available in Swagger:
+After restarting the FastAPI server, the latest endpoints are available in Swagger:
 
 - Swagger UI: `http://127.0.0.1:8000/docs`
 - ReDoc: `http://127.0.0.1:8000/redoc`
-- New endpoint: `GET /events/quotes`
+- `GET /events/quotes`
+- `GET /orders/historical`
+- `GET /orders/book`
+- `GET /orders/netpositions`
 
 ## Utility Scripts
 

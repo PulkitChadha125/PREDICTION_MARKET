@@ -8,8 +8,11 @@ from models.order_models import (
     CancelOrderResponse,
     GenericOrderRequest,
     GenericOrderResponse,
+    HistoricalDataResponse,
     LiveOrdersResponse,
+    NetPositionsResponse,
     OrderReplyRequest,
+    OrderbookResponse,
     OrderRequest,
     OrderResponse,
     WhatIfResponse,
@@ -20,6 +23,68 @@ from services.order_service import OrderService
 router = APIRouter(prefix="/orders", tags=["orders"])
 ibkr_client = IBKRClient()
 order_service = OrderService(ibkr_client)
+
+
+def _extract_order_rows(payload: object) -> list[dict]:
+    """Normalize IBKR order payload shape to a flat list of order dicts."""
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+    if isinstance(payload, dict):
+        for key in ("orders", "records", "data"):
+            value = payload.get(key)
+            if isinstance(value, list):
+                return [item for item in value if isinstance(item, dict)]
+    return []
+
+
+def _order_status_value(order: dict) -> str:
+    """Extract status from variable IBKR order response keys."""
+    for key in ("status", "order_status", "orderStatus"):
+        value = order.get(key)
+        if isinstance(value, str):
+            return value.strip().lower()
+    return ""
+
+
+def _normalize_statuses(statuses: str) -> list[str]:
+    """Parse and normalize user-provided order status list."""
+    allowed = {"open", "completed", "rejected", "canceled"}
+    parsed = [chunk.strip().lower() for chunk in statuses.split(",") if chunk.strip()]
+    if not parsed:
+        return ["open", "completed", "rejected", "canceled"]
+    deduped = list(dict.fromkeys(parsed))
+    invalid = [item for item in deduped if item not in allowed]
+    if invalid:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Unsupported statuses: {invalid}. Allowed: {sorted(allowed)}",
+        )
+    return deduped
+
+
+def _status_matches(raw_status: str, requested_status: str) -> bool:
+    """Map normalized API statuses to IBKR status text variants."""
+    raw = raw_status.lower()
+    if requested_status == "open":
+        return raw in {
+            "submitted",
+            "presubmitted",
+            "pending submit",
+            "pending_submit",
+            "api pending",
+            "api_pending",
+            "open",
+            "working",
+            "partially filled",
+            "partially_filled",
+        }
+    if requested_status == "completed":
+        return raw in {"filled", "executed", "completed"}
+    if requested_status == "rejected":
+        return "reject" in raw or raw in {"inactive", "cancelled by system"}
+    if requested_status == "canceled":
+        return "cancel" in raw
+    return False
 
 
 @router.post("/yes", response_model=OrderResponse)
@@ -143,5 +208,91 @@ def get_live_orders(account_id: str = Query(...)) -> LiveOrdersResponse:
     try:
         broker_response = ibkr_client.get_live_orders(account_id=account_id)
         return LiveOrdersResponse(account_id=account_id, broker_response=broker_response)
+    except IBKRClientError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/historical", response_model=HistoricalDataResponse)
+def get_historical_data(
+    conid: int = Query(..., description="Contract ID to fetch historical bars for."),
+    period: str = Query("1d", description="IBKR period, e.g. 1d, 1w, 1m."),
+    bar: str = Query("1min", description="IBKR bar size, e.g. 1min, 5min, 1h."),
+    exchange: str | None = Query(None, description="Optional exchange code."),
+    outside_rth: bool = Query(
+        True, description="Include outside regular trading hours bars."
+    ),
+    start_time: str | None = Query(
+        None,
+        description="Optional start time in IBKR format, e.g. 20260427-00:00:00.",
+    ),
+) -> HistoricalDataResponse:
+    """Fetch historical market data bars from IBKR."""
+    try:
+        broker_response = ibkr_client.get_historical_data(
+            conid=conid,
+            period=period,
+            bar=bar,
+            exchange=exchange,
+            outside_rth=outside_rth,
+            start_time=start_time,
+        )
+        return HistoricalDataResponse(
+            conid=conid,
+            period=period,
+            bar=bar,
+            broker_response=broker_response,
+        )
+    except IBKRClientError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/book", response_model=OrderbookResponse)
+def get_orderbook(
+    account_id: str = Query(..., description="Account ID whose orderbook is requested."),
+    statuses: str = Query(
+        "open,completed,rejected,canceled",
+        description="Comma-separated statuses: open,completed,rejected,canceled",
+    ),
+) -> OrderbookResponse:
+    """Fetch orderbook filtered by status buckets."""
+    normalized_statuses = _normalize_statuses(statuses)
+    ibkr_filters = [status for status in normalized_statuses if status != "completed"]
+    try:
+        broker_response = ibkr_client.get_orderbook(
+            account_id=account_id, statuses=ibkr_filters or None
+        )
+        order_rows = _extract_order_rows(broker_response)
+        filtered_orders = [
+            order
+            for order in order_rows
+            if any(
+                _status_matches(_order_status_value(order), requested)
+                for requested in normalized_statuses
+            )
+        ]
+        return OrderbookResponse(
+            account_id=account_id,
+            statuses=normalized_statuses,
+            total=len(filtered_orders),
+            orders=filtered_orders,
+            broker_response=broker_response,
+        )
+    except IBKRClientError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/netpositions", response_model=NetPositionsResponse)
+def get_net_positions(
+    account_id: str = Query(..., description="Account ID to fetch net positions for."),
+    page: int = Query(0, ge=0, description="Portfolio page index."),
+) -> NetPositionsResponse:
+    """Fetch account net positions."""
+    try:
+        broker_response = ibkr_client.get_net_positions(account_id=account_id, page=page)
+        return NetPositionsResponse(
+            account_id=account_id,
+            page=page,
+            broker_response=broker_response,
+        )
     except IBKRClientError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc

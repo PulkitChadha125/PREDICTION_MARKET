@@ -345,3 +345,194 @@ Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificat
 14:04:50.325 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|125ms
 14:04:50.326 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":563608,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
 14:04:51.620 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=877309547%2C877309550%2C875861841%2C875861844&fields=31%2C84%2C86,200|114ms
+14:05:20.305 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|113ms
+14:05:20.307 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":533615,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:05:45.755 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=877309547%2C877309550%2C875861841%2C875861844&fields=31%2C84%2C86,200|353ms
+14:05:45.926 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=875861841%2C875861844&fields=31%2C84%2C86,200|168ms
+14:05:46.039 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=875861841&fields=31%2C84%2C86,200|110ms
+14:05:46.155 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=875861844&fields=31%2C84%2C86,200|109ms
+14:05:50.303 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|114ms
+14:05:50.303 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":503618,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:06:20.310 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|113ms
+14:06:20.310 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":473613,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:06:50.300 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|112ms
+14:06:50.301 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":443623,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:06:59.441 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=877309547%2C877309550%2C875861841%2C875861844&fields=31%2C84%2C86,200|114ms
+14:06:59.582 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=875861841%2C875861844&fields=31%2C84%2C86,200|137ms
+14:06:59.758 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=875861841&fields=31%2C84%2C86,200|172ms
+14:06:59.868 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/marketdata/snapshot?conids=875861844&fields=31%2C84%2C86,200|107ms
+14:07:20.294 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|109ms
+14:07:20.295 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":413632,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:07:50.485 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|289ms
+14:07:50.486 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":383442,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:08:20.385 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|197ms
+14:08:20.386 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":353544,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:08:50.311 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|111ms
+14:08:50.312 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":323617,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:09:14.427 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|326ms
+14:09:14.428 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+14:09:20.306 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|112ms
+14:09:20.306 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":293623,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:09:50.311 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|122ms
+14:09:50.311 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":263621,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:10:20.307 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|110ms
+14:10:20.308 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":233625,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:10:50.326 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|128ms
+14:10:50.327 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":203608,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:11:20.310 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|113ms
+14:11:20.311 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":173627,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:11:50.310 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|114ms
+14:11:50.310 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":143627,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:12:20.300 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|111ms
+14:12:20.301 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":113639,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:12:50.337 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|147ms
+14:12:50.338 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":83608,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:13:20.566 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|372ms
+14:13:20.566 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":53374,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:13:50.336 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|135ms
+14:13:50.336 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"7368ee01ac937a282072ba87743d19b6","ssoExpires":23605,"collission":false,"userId":181231326,"hmds":{"error":"no bridge"},"iserver":{"authStatus":{"authenticated":true,"established":true,"competing":false,"connected":true,"message":"","MAC":"06:B3:B1:5B:53:82","serverInfo":{"serverName":"JifS18045","serverVersion":"Build 10.44.1h, Apr 20, 2026 11:22:51 AM"},"hardware_info":"178c2f15|06:B3:B1:5B:53:82"}}}
+14:14:14.614 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|526ms
+14:14:14.614 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+14:14:20.384 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,401|197ms
+14:14:20.384 WARN  vert.x-eventloop-thread-0 BaseServiceProxy     : failed /v1/api/tickle | reason Access Denied
+14:14:20.385 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle null
+14:14:20.385 ERROR vert.x-eventloop-thread-0 ClientPortalService  : tickle cp session failed {}
+io.vertx.core.impl.NoStackTraceThrowable: Access Denied
+14:14:20.385 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : cancel timer ClientPortalService 2
+14:14:20.386 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : forward event ON_CP_TICKLE_FAILED, payload none
+14:14:21.622 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/sso/validate?gw=1,200|1236ms
+14:14:21.624 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : portal validate response: {"PAPER_USER_NAME":"txlxzk529","IS_PENDING_APPLICANT":true,"SF_ENABLED":false,"HARDWARE_INFO":"","UNIQUE_LOGIN_ID":"181231326-1777106051467","AUTH_TIME":1777106051491,"SF_CONFIG":"","USER_NAME":"txlxzk410","CREDENTIAL_TYPE":5,"IS_FREE_TRIAL":true,"LOGIN_TYPE":1,"LANDING_APP":"UNIVERSAL","CREDENTIAL":"okapplication","ANOMALOUS_LOGIN":false,"RESULT":true,"IP":"103.206.178.222","USER_ID":181231326,"EXPIRES":1777106660249,"TOKEN":"2c092c83399b52632cd28408f270d8a2da06522c","took":913,"IS_MASTER":false,"features":{"env":"PROD","wlms":true,"realtime":true,"bond":true,"optionChains":true,"calendar":true,"newMf":true},"region":"SG"}
+14:14:21.624 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     : authenticated to cp
+14:14:21.624 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : cancel timer SsoService 0
+14:14:21.624 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : start timer 300000 SsoService
+14:14:21.625 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : forward event ON_SSO_VALIDATION, payload 181231326
+14:14:21.758 INFO  vert.x-eventloop-thread-0 SsoService           : sso init status=200, url=https://api.ibkr.com/v1/api/ssodh/init
+14:14:21.759 ERROR vert.x-eventloop-thread-0 SsoService           : ssodh response error: {"message":"sso dh already set"}
+14:14:21.759 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : forward event ON_SSODH_FAILED, payload none
+14:14:21.759 ERROR vert.x-eventloop-thread-0 GatewayHttpProxy     : ssodh failed, retry with /iserver/reauthenticate
+14:14:21.932 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/one/user,200|308ms
+14:14:21.932 INFO  vert.x-eventloop-thread-0 ClientPortalService  : get user reply {"username":"okapplication","features":{"env":"PROD","wlms":true,"realtime":true,"bond":true,"optionChains":true,"calendar":true,"newMf":true},"wbId":"","uar":{"portfolioAnalyst":true,"userInfo":true,"messageCenter":true,"accountDetails":true,"tradingRestrictions":false,"tws":true,"fyi":true,"voting":true,"forum":true,"recentTransactions":true},"props":{"isIBAMClient":false,"ReadOnlySession":null},"accts":{"U25248122":{"isIBAMClient":false,"clearingStatus":"P","openDate":1775664000000,"isFAClient":false,"isFunded":false,"tradingPermissions":[]}},"hasBrokerageAccessInd":true,"hfcipEligibleInd":false,"fa":false,"has2fa":false,"islite":false,"ispaper":false,"applicants":[{"id":24690173,"type":"INDIVIDUAL","businessType":"INDEPENDENT","nlcode":"en_US","legalCountry":{"name":"United States","alpha3":"USA"}}]}
+14:19:21.978 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|348ms
+14:19:21.978 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+14:24:22.203 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|573ms
+14:24:22.203 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "false"}
+14:29:22.115 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|486ms
+14:29:22.116 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+14:34:21.962 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|325ms
+14:34:21.963 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+14:39:21.963 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|332ms
+14:39:21.963 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+14:44:21.983 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|346ms
+14:44:21.983 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+14:49:22.853 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,500|1226ms
+14:49:22.853 WARN  vert.x-eventloop-thread-0 BaseServiceProxy     : failed /sso/ping | reason <HTML><HEAD>
+<TITLE>Internal Server Error</TITLE>
+</HEAD><BODY>
+<H1>Internal Server Error - Read</H1>
+The server encountered an internal error or misconfiguration and was unable to
+complete your request.<P>
+Reference&#32;&#35;3&#46;36a4c117&#46;1777108761&#46;5903465
+<P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;3&#46;36a4c117&#46;1777108761&#46;5903465</P>
+</BODY></HTML>
+
+14:49:22.853 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping null
+14:49:22.853 WARN  vert.x-eventloop-thread-0 BaseServiceProxy     : failed /sso/ping | reason 500
+14:49:22.853 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping null
+14:54:22.228 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|593ms
+14:54:22.229 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+14:59:21.951 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|321ms
+14:59:21.952 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:04:22.150 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|521ms
+15:04:22.151 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:09:22.178 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|541ms
+15:09:22.178 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:14:22.227 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|593ms
+15:14:22.228 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:19:22.175 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|542ms
+15:19:22.175 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:24:22.362 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|723ms
+15:24:22.363 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:29:22.190 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|565ms
+15:29:22.190 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:34:21.974 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|341ms
+15:34:21.974 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:39:21.989 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|355ms
+15:39:21.990 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:44:22.148 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|518ms
+15:44:22.148 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:49:22.193 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|568ms
+15:49:22.194 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:54:21.972 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|335ms
+15:54:21.972 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+15:59:21.974 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|336ms
+15:59:21.974 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:04:22.134 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|507ms
+16:04:22.135 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:09:21.949 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|319ms
+16:09:21.950 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:14:22.166 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|540ms
+16:14:22.166 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:19:22.133 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|502ms
+16:19:22.134 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:24:22.423 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|788ms
+16:24:22.423 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:29:22.194 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|559ms
+16:29:22.194 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:34:22.191 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|566ms
+16:34:22.191 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:39:22.217 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|579ms
+16:39:22.217 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:44:21.980 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|341ms
+16:44:21.980 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:49:22.270 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|633ms
+16:49:22.270 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:54:22.412 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|786ms
+16:54:22.412 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+16:59:22.164 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|531ms
+16:59:22.164 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:04:22.241 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|607ms
+17:04:22.241 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:09:22.171 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|542ms
+17:09:22.172 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:14:22.178 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|545ms
+17:14:22.179 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:19:22.213 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|583ms
+17:19:22.213 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:24:20.422 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|542ms
+17:24:20.423 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:29:20.418 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|546ms
+17:29:20.419 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:34:20.719 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|852ms
+17:34:20.720 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:39:20.234 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|356ms
+17:39:20.234 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:44:20.240 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|365ms
+17:44:20.241 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:49:20.413 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|547ms
+17:49:20.413 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:54:20.223 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|344ms
+17:54:20.224 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+17:59:20.209 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|339ms
+17:59:20.209 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:04:20.436 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|556ms
+18:04:20.436 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:09:20.422 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|547ms
+18:09:20.423 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:14:20.416 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|544ms
+18:14:20.416 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:19:20.647 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|768ms
+18:19:20.648 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:24:20.205 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|336ms
+18:24:20.205 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:29:20.611 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|733ms
+18:29:20.612 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:34:20.240 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|365ms
+18:34:20.240 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:39:20.599 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|728ms
+18:39:20.600 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:44:20.449 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|578ms
+18:44:20.449 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:49:20.399 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|519ms
+18:49:20.399 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+18:54:20.245 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|372ms
+18:54:20.246 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}

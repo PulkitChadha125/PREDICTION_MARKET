@@ -394,6 +394,44 @@ class IBKRClient:
         params = {"accountId": account_id}
         return self._request("GET", "/iserver/account/orders", params=params)
 
+    def get_historical_data(
+        self,
+        conid: int,
+        period: str = "1d",
+        bar: str = "1min",
+        exchange: str | None = None,
+        outside_rth: bool = True,
+        start_time: str | None = None,
+    ) -> Any:
+        """Fetch historical OHLCV bars from IBKR marketdata history endpoint."""
+        params: dict[str, Any] = {
+            "conid": conid,
+            "period": period,
+            "bar": bar,
+            "outsideRth": str(outside_rth).lower(),
+        }
+        if exchange:
+            params["exchange"] = exchange
+        if start_time:
+            params["startTime"] = start_time
+        return self._request("GET", "/iserver/marketdata/history", params=params)
+
+    def get_orderbook(self, account_id: str, statuses: list[str] | None = None) -> Any:
+        """
+        Fetch account orders and optionally request IBKR-side status filtering.
+
+        IBKR gateway behavior can vary by build, so callers should still apply
+        local filtering as needed.
+        """
+        params: dict[str, Any] = {"accountId": account_id}
+        if statuses:
+            params["filters"] = ",".join(statuses)
+        return self._request("GET", "/iserver/account/orders", params=params)
+
+    def get_net_positions(self, account_id: str, page: int = 0) -> Any:
+        """Fetch account net positions from IBKR portfolio endpoint."""
+        return self._request("GET", f"/portfolio/{account_id}/positions/{page}")
+
     def get_accounts(self) -> Any:
         """Fetch accessible account list (useful as readiness check)."""
         return self._request("GET", "/iserver/accounts")

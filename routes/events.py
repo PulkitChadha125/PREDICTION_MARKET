@@ -139,9 +139,9 @@ def _to_optional_float(value: object) -> float | None:
 
 
 def _quote_field_count(row: dict[str, object]) -> int:
-    """Count populated quote fields among LTP/BID/ASK for row quality ranking."""
+    """Count populated quote fields among LTP/BID/ASK/VOLUME for row quality ranking."""
     populated = 0
-    for field in ("31", "84", "86"):
+    for field in ("31", "84", "86", "87"):
         if _to_optional_float(row.get(field)) is not None:
             populated += 1
     return populated
@@ -555,11 +555,11 @@ def get_quotes(
         description="Single conid or comma-separated conids, e.g. 877309547,877309550",
     ),
     fields: str = Query(
-        "31,84,86",
-        description="IBKR marketdata fields. Defaults to 31(LTP),84(BID),86(ASK).",
+        "31,84,86,87",
+        description="IBKR marketdata fields. Defaults to 31(LTP),84(BID),86(ASK),87(VOLUME).",
     ),
 ) -> MarketQuoteResponse:
-    """Fetch quote snapshot (LTP/BID/ASK) for one or multiple contract conids."""
+    """Fetch quote snapshot (LTP/BID/ASK/VOLUME) for one or multiple contract conids."""
     parsed_conids = [chunk.strip() for chunk in conids.split(",") if chunk.strip()]
     if not parsed_conids:
         raise HTTPException(status_code=422, detail="Provide at least one conid.")
@@ -595,6 +595,7 @@ def get_quotes(
             _to_optional_float(row.get("31")) is None
             and _to_optional_float(row.get("84")) is None
             and _to_optional_float(row.get("86")) is None
+            and _to_optional_float(row.get("87")) is None
         )
 
     missing_conids = [cid for cid in parsed_conid_ints if _missing_quote(cid)]
@@ -648,6 +649,7 @@ def get_quotes(
                 ltp=_to_optional_float(raw.get("31")),
                 bid=_to_optional_float(raw.get("84")),
                 ask=_to_optional_float(raw.get("86")),
+                volume=_to_optional_float(raw.get("87")),
                 raw=raw,
             )
         )
