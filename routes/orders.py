@@ -212,18 +212,41 @@ def get_live_orders(account_id: str = Query(...)) -> LiveOrdersResponse:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
 
-@router.get("/historical", response_model=HistoricalDataResponse)
+@router.get(
+    "/historical",
+    response_model=HistoricalDataResponse,
+    summary="Get historical bars",
+    description=(
+        "Fetch IBKR historical OHLCV bars for a conid using period/bar controls. "
+        "Useful for charting and intraday backfill."
+    ),
+)
 def get_historical_data(
-    conid: int = Query(..., description="Contract ID to fetch historical bars for."),
-    period: str = Query("1d", description="IBKR period, e.g. 1d, 1w, 1m."),
-    bar: str = Query("1min", description="IBKR bar size, e.g. 1min, 5min, 1h."),
-    exchange: str | None = Query(None, description="Optional exchange code."),
+    conid: int = Query(
+        ...,
+        description="Contract ID to fetch historical bars for.",
+        examples=[877789100],
+    ),
+    period: str = Query(
+        "1d",
+        description="IBKR period, e.g. 1d, 2d, 1w, 1m.",
+        examples=["2d"],
+    ),
+    bar: str = Query(
+        "1min",
+        description="IBKR bar size, e.g. 1min, 5min, 1h.",
+        examples=["1min"],
+    ),
+    exchange: str | None = Query(
+        None, description="Optional exchange code.", examples=["FORECASTX"]
+    ),
     outside_rth: bool = Query(
         True, description="Include outside regular trading hours bars."
     ),
     start_time: str | None = Query(
         None,
         description="Optional start time in IBKR format, e.g. 20260427-00:00:00.",
+        examples=["20260427-00:00:00"],
     ),
 ) -> HistoricalDataResponse:
     """Fetch historical market data bars from IBKR."""
@@ -246,12 +269,25 @@ def get_historical_data(
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
 
-@router.get("/book", response_model=OrderbookResponse)
+@router.get(
+    "/book",
+    response_model=OrderbookResponse,
+    summary="Get orderbook by status",
+    description=(
+        "Fetch account orderbook and filter by status buckets. "
+        "Supported statuses: open, completed, rejected, canceled."
+    ),
+)
 def get_orderbook(
-    account_id: str = Query(..., description="Account ID whose orderbook is requested."),
+    account_id: str = Query(
+        ...,
+        description="Account ID whose orderbook is requested.",
+        examples=["DU123456"],
+    ),
     statuses: str = Query(
         "open,completed,rejected,canceled",
         description="Comma-separated statuses: open,completed,rejected,canceled",
+        examples=["open,completed,rejected,canceled"],
     ),
 ) -> OrderbookResponse:
     """Fetch orderbook filtered by status buckets."""
@@ -281,9 +317,18 @@ def get_orderbook(
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
 
-@router.get("/netpositions", response_model=NetPositionsResponse)
+@router.get(
+    "/netpositions",
+    response_model=NetPositionsResponse,
+    summary="Get net positions",
+    description="Fetch account net positions from IBKR portfolio endpoint.",
+)
 def get_net_positions(
-    account_id: str = Query(..., description="Account ID to fetch net positions for."),
+    account_id: str = Query(
+        ...,
+        description="Account ID to fetch net positions for.",
+        examples=["DU123456"],
+    ),
     page: int = Query(0, ge=0, description="Portfolio page index."),
 ) -> NetPositionsResponse:
     """Fetch account net positions."""

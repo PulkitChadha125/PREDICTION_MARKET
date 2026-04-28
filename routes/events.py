@@ -548,15 +548,25 @@ def discover_underlyings(
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
 
-@router.get("/quotes", response_model=MarketQuoteResponse)
+@router.get(
+    "/quotes",
+    response_model=MarketQuoteResponse,
+    summary="Get LTP/BID/ASK/VOLUME snapshot",
+    description=(
+        "Fetch quote snapshot for one or multiple contract conids. "
+        "By default returns IBKR fields 31(LTP), 84(BID), 86(ASK), and 87(VOLUME)."
+    ),
+)
 def get_quotes(
     conids: str = Query(
         ...,
         description="Single conid or comma-separated conids, e.g. 877309547,877309550",
+        examples=["877309547,877309550"],
     ),
     fields: str = Query(
         "31,84,86,87",
         description="IBKR marketdata fields. Defaults to 31(LTP),84(BID),86(ASK),87(VOLUME).",
+        examples=["31,84,86,87"],
     ),
 ) -> MarketQuoteResponse:
     """Fetch quote snapshot (LTP/BID/ASK/VOLUME) for one or multiple contract conids."""
