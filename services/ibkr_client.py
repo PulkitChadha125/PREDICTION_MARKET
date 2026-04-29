@@ -389,9 +389,9 @@ class IBKRClient:
             f"/iserver/account/{account_id}/order/{order_id}",
         )
 
-    def get_live_orders(self, account_id: str) -> Any:
+    def get_live_orders(self, account_id: str, force: bool = False) -> Any:
         """Fetch live/open orders for an account."""
-        params = {"accountId": account_id}
+        params = {"accountId": account_id, "force": str(force).lower()}
         return self._request("GET", "/iserver/account/orders", params=params)
 
     def get_historical_data(
@@ -416,17 +416,19 @@ class IBKRClient:
             params["startTime"] = start_time
         return self._request("GET", "/iserver/marketdata/history", params=params)
 
-    def get_orderbook(self, account_id: str, statuses: list[str] | None = None) -> Any:
+    def get_orderbook(self, account_id: str, force: bool = False) -> Any:
         """
-        Fetch account orders and optionally request IBKR-side status filtering.
+        Fetch account orders.
 
-        IBKR gateway behavior can vary by build, so callers should still apply
-        local filtering as needed.
+        Do not pass server-side `filters`; some IBKR gateway builds reject
+        filter values with HTTP 400. Status filtering is done in route logic.
         """
-        params: dict[str, Any] = {"accountId": account_id}
-        if statuses:
-            params["filters"] = ",".join(statuses)
+        params: dict[str, Any] = {"accountId": account_id, "force": str(force).lower()}
         return self._request("GET", "/iserver/account/orders", params=params)
+
+    def get_order_status(self, order_id: str) -> Any:
+        """Fetch one order status directly from IBKR order status endpoint."""
+        return self._request("GET", f"/iserver/account/order/status/{order_id}")
 
     def get_net_positions(self, account_id: str, page: int = 0) -> Any:
         """Fetch account net positions from IBKR portfolio endpoint."""

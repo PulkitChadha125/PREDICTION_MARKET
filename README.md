@@ -109,6 +109,8 @@ Use `curl.exe` (not `curl` alias) and single-quoted JSON bodies.
 
 ```powershell
 curl.exe -s "http://127.0.0.1:8000/auth/ready"
+curl.exe -s "http://32.193.90.145:8000/auth/ready"
+
 ```
 
 Use one value from `accounts_response.accounts` as `REAL_ACCOUNT_ID`.
@@ -117,13 +119,17 @@ Use one value from `accounts_response.accounts` as `REAL_ACCOUNT_ID`.
 
 ```powershell
 curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=FF&exchange=CME"
-curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&exchange=FORECASTX"
+curl.exe -s "http://32.193.90.145:8000/events/topics/console?symbols=UHSFO&exchange=FORECASTX"
 
-curl.exe -s "http://127.0.0.1:8000/events/chain?symbol=UHSFO&sec_type=IND&month=202604&exchange=FORECASTX&sectype=OPT&conid=853400816"
+curl.exe -s "http://32.193.90.145:8000/events/chain?symbol=UHSFO&sec_type=IND&month=202604&exchange=FORECASTX&sectype=OPT&conid=853400816"
 ```
 For CME-style event options, pass `sec_type=FOP` (or `FUT`) and exchange `CME`/`CBT`:
 ```powershell
 curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=UHSFO&sec_type=FOP&exchange=FORECASTX"
+
+curl.exe -s "http://32.193.90.145:8000/events/topics/console?symbols=UHSFO&sec_type=FOP&exchange=FORECASTX"
+
+
 ```
 You can call `/events/chain` in two ways:
 - By `symbol` (discovery flow): provide `symbol`, `month`, `exchange`
@@ -190,7 +196,7 @@ Example response:
 ### 3) Place YES / NO
 
 ```powershell
-curl.exe -s -X POST "http://127.0.0.1:8000/orders/yes" -H "Content-Type: application/json" -d '{"account_id":"DUP766324","conid":"875861841","quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
+curl.exe -s -X POST "http://32.193.90.145:8000/orders/yes" -H "Content-Type: application/json" -d '{"account_id":"DUP766324","conid":"877789111","quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
 curl.exe -s -X POST "http://127.0.0.1:8000/orders/no"  -H "Content-Type: application/json" -d '{"account_id":"873489349","conid":873489349,"quantity":1,"order_type":"MKT","price":null,"tif":"DAY","auto_confirm":true}'
 ```
 

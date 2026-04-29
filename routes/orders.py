@@ -11,6 +11,7 @@ from models.order_models import (
     HistoricalDataResponse,
     LiveOrdersResponse,
     NetPositionsResponse,
+    OrderStatusResponse,
     OrderReplyRequest,
     OrderbookResponse,
     OrderRequest,
@@ -85,6 +86,16 @@ def _status_matches(raw_status: str, requested_status: str) -> bool:
     if requested_status == "canceled":
         return "cancel" in raw
     return False
+
+
+def _extract_order_id_value(order: dict) -> str:
+    """Extract order id from common IBKR order row keys."""
+    for key in ("orderId", "order_id", "id", "order_ref"):
+        value = order.get(key)
+        if value is None:
+            continue
+        return str(value).strip()
+    return ""
 
 
 @router.post("/yes", response_model=OrderResponse)
@@ -203,11 +214,64 @@ def cancel_order(
 
 
 @router.get("/live", response_model=LiveOrdersResponse)
-def get_live_orders(account_id: str = Query(...)) -> LiveOrdersResponse:
+def get_live_orders(
+    account_id: str = Query(...),
+    force: bool = Query(
+        False, description="Set true to request full current-day order snapshot."
+    ),
+) -> LiveOrdersResponse:
     """Get live/open orders from IBKR for the given account."""
     try:
-        broker_response = ibkr_client.get_live_orders(account_id=account_id)
+        broker_response = ibkr_client.get_live_orders(account_id=account_id, force=force)
         return LiveOrdersResponse(account_id=account_id, broker_response=broker_response)
+    except IBKRClientError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get(
+    "/status/{order_id}",
+    response_model=OrderStatusResponse,
+    summary="Get single order status",
+    description="Fetch latest status/details for one order id under the given account.",
+)
+def get_order_status(
+    order_id: str,
+    account_id: str = Query(
+        ...,
+        description="Account that owns the order.",
+        examples=["DU123456"],
+    ),
+    force: bool = Query(
+        True, description="Set true to request a fresh snapshot before lookup."
+    ),
+) -> OrderStatusResponse:
+    """Return status for one order id using account order feed."""
+    try:
+        broker_response = ibkr_client.get_live_orders(account_id=account_id, force=force)
+        order_rows = _extract_order_rows(broker_response)
+        order_id_str = order_id.strip()
+        matched_order = next(
+            (order for order in order_rows if _extract_order_id_value(order) == order_id_str),
+            None,
+        )
+        direct_status_response = None
+        if matched_order is None:
+            # Fallback for IBKR builds that omit order rows in account snapshot.
+            direct_status_response = ibkr_client.get_order_status(order_id_str)
+            if isinstance(direct_status_response, dict):
+                matched_order = direct_status_response
+        status_value = _order_status_value(matched_order) if isinstance(matched_order, dict) else None
+        return OrderStatusResponse(
+            account_id=account_id,
+            order_id=order_id_str,
+            found=matched_order is not None,
+            order_status=status_value,
+            order=matched_order,
+            broker_response={
+                "orders_response": broker_response,
+                "direct_status_response": direct_status_response,
+            },
+        )
     except IBKRClientError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
 
@@ -289,14 +353,14 @@ def get_orderbook(
         description="Comma-separated statuses: open,completed,rejected,canceled",
         examples=["open,completed,rejected,canceled"],
     ),
+    force: bool = Query(
+        True, description="Set true to request full current-day order snapshot."
+    ),
 ) -> OrderbookResponse:
     """Fetch orderbook filtered by status buckets."""
     normalized_statuses = _normalize_statuses(statuses)
-    ibkr_filters = [status for status in normalized_statuses if status != "completed"]
     try:
-        broker_response = ibkr_client.get_orderbook(
-            account_id=account_id, statuses=ibkr_filters or None
-        )
+        broker_response = ibkr_client.get_orderbook(account_id=account_id, force=force)
         order_rows = _extract_order_rows(broker_response)
         filtered_orders = [
             order

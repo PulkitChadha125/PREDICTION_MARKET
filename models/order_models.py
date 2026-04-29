@@ -130,3 +130,15 @@ class NetPositionsResponse(BaseModel):
     account_id: str
     page: int
     broker_response: Any
+
+
+class OrderStatusResponse(BaseModel):
+    """Single-order status lookup response."""
+
+    status: str = "success"
+    account_id: str
+    order_id: str
+    found: bool
+    order_status: str | None = None
+    order: dict[str, Any] | None = None
+    broker_response: Any
