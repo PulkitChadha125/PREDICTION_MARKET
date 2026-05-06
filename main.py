@@ -19,6 +19,7 @@ This is session-based and mainly suitable for local testing / prototyping.
    - GET  /events/symbols         -> all ForecastEx product symbols (category tree)
    - GET  /events/topics/all      -> same as /events/symbols
    - GET  /events/chain           -> get normalized YES/NO chain
+   - GET  /events/market-depth    -> top-of-book bid/ask with open qty
    - POST /orders/yes             -> place BUY YES order
    - POST /orders/no              -> place BUY NO order
    - POST /orders                 -> place BUY or SELL by conid

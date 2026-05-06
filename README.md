@@ -51,15 +51,17 @@ Useful pages:
    `GET /events/chain?...`
 4. Get live quote snapshot (LTP/BID/ASK) for one or many conids  
    `GET /events/quotes?conids=...`
-5. Place order  
+5. Get market depth snapshot (bid/ask + open qty at top of book)  
+   `GET /events/market-depth?conids=...`
+6. Place order  
    `POST /orders/yes` or `POST /orders/no`
-6. Track open/live orders  
+7. Track open/live orders  
    `GET /orders/live`
-7. Fetch historical bars (optional)  
+8. Fetch historical bars (optional)  
    `GET /orders/historical?conid=...`
-8. Fetch status-wise orderbook (optional)  
+9. Fetch status-wise orderbook (optional)  
    `GET /orders/book?account_id=...&statuses=open,completed,rejected,canceled`
-9. Fetch net positions (optional)  
+10. Fetch net positions (optional)  
    `GET /orders/netpositions?account_id=...`
 
 ## Endpoint Overview
@@ -78,6 +80,7 @@ Useful pages:
 - `GET /events/contracts`
 - `GET /events/chain`
 - `GET /events/quotes`
+- `GET /events/market-depth`
 - `POST /events/chain/check` (Swagger body input for your own values)
 
 ### Orders
@@ -92,7 +95,10 @@ Useful pages:
 - `GET /orders/book` (orderbook by status: open/completed/rejected/canceled)
 - `GET /orders/netpositions` (portfolio net positions)
 
-## New APIs (Historical + Orderbook + Net Positions)
+## New APIs (Market Depth + Historical + Orderbook + Net Positions)
+
+- `GET /events/market-depth`  
+  Fetch top-of-book depth per conid with `bid.price`, `bid.open_qty`, `ask.price`, and `ask.open_qty`.
 
 - `GET /orders/historical`  
   Fetch historical candles from IBKR for a contract (`conid`, `period`, `bar`, etc.).
@@ -119,9 +125,9 @@ Use one value from `accounts_response.accounts` as `REAL_ACCOUNT_ID`.
 
 ```powershell
 curl.exe -s "http://127.0.0.1:8000/events/topics/console?symbols=FF&exchange=CME"
-curl.exe -s "http://32.193.90.145:8000/events/topics/console?symbols=UHSFO&exchange=FORECASTX"
+curl.exe -s "http://32.193.90.145:8000/events/topics/console?symbols=UHLGA&exchange=FORECASTX"
 
-curl.exe -s "http://32.193.90.145:8000/events/chain?symbol=UHSFO&sec_type=IND&month=202604&exchange=FORECASTX&sectype=OPT&conid=853400816"
+curl.exe -s "http://32.193.90.145:8000/events/chain?symbol=UHLGA&sec_type=IND&month=202605&exchange=FORECASTX&sectype=OPT&conid=853400786"
 ```
 For CME-style event options, pass `sec_type=FOP` (or `FUT`) and exchange `CME`/`CBT`:
 ```powershell
@@ -153,7 +159,7 @@ Field mapping from IBKR snapshot:
 
 ```powershell
 # single conid
-curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547"
+curl.exe -s "http://32.193.90.145:8000/events/quotes?conids=878744229"
 
 # multiple conids
 curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547,877309550,875861841,875861844"
@@ -162,7 +168,24 @@ curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547,877309550,8758
 curl.exe -s "http://127.0.0.1:8000/events/quotes?conids=877309547,877309550&fields=31,84,86,87,88"
 ```
 
-Example response:
+### 2d) Get market depth (BID/ASK + OPEN QTY)
+
+For top-of-book depth, this API returns:
+- `bid.price`, `bid.open_qty`
+- `ask.price`, `ask.open_qty`
+
+```powershell
+# single conid
+curl.exe -s "http://127.0.0.1:8000/events/market-depth?conids=853400786"
+
+# multiple conids
+curl.exe -s "http://127.0.0.1:8000/events/market-depth?conids=877309547,877309550"
+
+# optional custom fields (default uses 84,85,86,88)
+curl.exe -s "http://127.0.0.1:8000/events/market-depth?conids=877309547&fields=84,85,86,88"
+```
+
+Quote API example response:
 
 ```json
 {
@@ -187,6 +210,39 @@ Example response:
       "raw": {
         "conid": 877309550,
         "84": "0.98"
+      }
+    }
+  ]
+}
+```
+
+Market depth API example response:
+
+```json
+{
+  "status": "success",
+  "total": 2,
+  "depths": [
+    {
+      "conid": 877309547,
+      "bid": { "price": 0.98, "open_qty": 12.0 },
+      "ask": { "price": 0.99, "open_qty": 7.0 },
+      "raw": {
+        "conid": 877309547,
+        "84": "0.98",
+        "88": "12",
+        "86": "0.99",
+        "85": "7"
+      }
+    },
+    {
+      "conid": 877309550,
+      "bid": { "price": null, "open_qty": null },
+      "ask": { "price": 0.04, "open_qty": 5.0 },
+      "raw": {
+        "conid": 877309550,
+        "86": "0.04",
+        "85": "5"
       }
     }
   ]
@@ -233,6 +289,7 @@ After restarting the FastAPI server, the latest endpoints are available in Swagg
 - Swagger UI: `http://127.0.0.1:8000/docs`
 - ReDoc: `http://127.0.0.1:8000/redoc`
 - `GET /events/quotes`
+- `GET /events/market-depth`
 - `GET /orders/historical`
 - `GET /orders/book`
 - `GET /orders/netpositions`
@@ -249,11 +306,5 @@ After restarting the FastAPI server, the latest endpoints are available in Swagg
 ---
 
 For a larger curl collection, see `command.txt`.
-
-
-
-
 curl.exe -k "https://localhost:5000/v1/api/iserver/secdef/info?conid=42755852&sectype=FOP&month=202606&exchange=CME"
 curl.exe -k "https://localhost:5000/v1/api/iserver/secdef/info?conid=42755852&sectype=FOP&month=202606&exchange=CBOT"
-
-

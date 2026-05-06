@@ -16,6 +16,9 @@ from models.event_models import (
     ContractInfoResponse,
     EventChainResponse,
     EventTopicSearchResponse,
+    MarketDepthItem,
+    MarketDepthLevel,
+    MarketDepthResponse,
     MarketQuoteItem,
     MarketQuoteResponse,
     StrikeListResponse,
@@ -159,6 +162,17 @@ def _pick_richer_row(
     if candidate_score > current_score:
         return candidate
     return current
+
+
+def _first_numeric(
+    row: dict[str, object], keys: tuple[str, ...]
+) -> float | None:
+    """Return first parseable numeric value from candidate keys."""
+    for key in keys:
+        parsed = _to_optional_float(row.get(key))
+        if parsed is not None:
+            return parsed
+    return None
 
 
 @router.get("/search", response_model=EventTopicSearchResponse)
@@ -665,3 +679,129 @@ def get_quotes(
         )
 
     return MarketQuoteResponse(status="success", total=len(quotes), quotes=quotes)
+
+
+@router.get(
+    "/market-depth",
+    response_model=MarketDepthResponse,
+    summary="Get market depth (top of book)",
+    description=(
+        "Fetch top-of-book bid/ask with open quantity (size) by conid. "
+        "Uses IBKR snapshot fields and normalizes bid/ask price + qty."
+    ),
+)
+def get_market_depth(
+    conids: str = Query(
+        ...,
+        description="Single conid or comma-separated conids, e.g. 877309547,877309550",
+        examples=["877309547,877309550"],
+    ),
+    fields: str = Query(
+        "84,85,86,88",
+        description=(
+            "IBKR marketdata fields for depth mapping. "
+            "Defaults to 84(BID),86(ASK),85(ASK_SIZE),88(BID_SIZE)."
+        ),
+        examples=["84,85,86,88"],
+    ),
+) -> MarketDepthResponse:
+    """Return normalized top-of-book depth with bid/ask price and open quantity."""
+    parsed_conids = [chunk.strip() for chunk in conids.split(",") if chunk.strip()]
+    if not parsed_conids:
+        raise HTTPException(status_code=422, detail="Provide at least one conid.")
+
+    unique_conids = list(dict.fromkeys(parsed_conids))
+    try:
+        parsed_conid_ints = [int(conid) for conid in unique_conids]
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail="All conids must be integers.") from exc
+
+    try:
+        snapshot_rows = event_service.client.get_market_snapshot(
+            conids=parsed_conid_ints,
+            fields=fields,
+        )
+    except IBKRClientError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    rows_by_conid: dict[int, dict[str, object]] = {}
+    for row in snapshot_rows:
+        if not isinstance(row, dict):
+            continue
+        conid_val = row.get("conid")
+        try:
+            conid_int = int(conid_val)  # type: ignore[arg-type]
+        except (TypeError, ValueError):
+            continue
+        rows_by_conid[conid_int] = _pick_richer_row(rows_by_conid.get(conid_int), row)
+
+    # IBKR snapshot can be sparse on first fetch; retry missing depth in batch, then one-by-one.
+    def _missing_depth(conid_int: int) -> bool:
+        row = rows_by_conid.get(conid_int, {})
+        return (
+            _first_numeric(row, ("84", "bid", "bidPrice", "bid_price")) is None
+            and _first_numeric(row, ("86", "ask", "askPrice", "ask_price")) is None
+            and _first_numeric(row, ("88", "bidSize", "bid_size", "bidQty")) is None
+            and _first_numeric(row, ("85", "askSize", "ask_size", "askQty")) is None
+        )
+
+    missing_conids = [cid for cid in parsed_conid_ints if _missing_depth(cid)]
+    if missing_conids:
+        try:
+            retry_rows = event_service.client.get_market_snapshot(
+                conids=missing_conids,
+                fields=fields,
+            )
+            for row in retry_rows:
+                if not isinstance(row, dict):
+                    continue
+                conid_val = row.get("conid")
+                try:
+                    conid_int = int(conid_val)  # type: ignore[arg-type]
+                except (TypeError, ValueError):
+                    continue
+                rows_by_conid[conid_int] = _pick_richer_row(
+                    rows_by_conid.get(conid_int), row
+                )
+        except IBKRClientError:
+            # Keep best-effort data from initial snapshot.
+            pass
+
+    missing_conids = [cid for cid in parsed_conid_ints if _missing_depth(cid)]
+    for conid_int in missing_conids:
+        try:
+            single_rows = event_service.client.get_market_snapshot(
+                conids=[conid_int],
+                fields=fields,
+            )
+        except IBKRClientError:
+            continue
+        for row in single_rows:
+            if not isinstance(row, dict):
+                continue
+            conid_val = row.get("conid")
+            try:
+                row_conid = int(conid_val)  # type: ignore[arg-type]
+            except (TypeError, ValueError):
+                continue
+            rows_by_conid[row_conid] = _pick_richer_row(rows_by_conid.get(row_conid), row)
+
+    depths: list[MarketDepthItem] = []
+    for conid in unique_conids:
+        conid_int = int(conid)
+        raw = rows_by_conid.get(conid_int, {})
+        bid_price = _first_numeric(raw, ("84", "bid", "bidPrice", "bid_price"))
+        ask_price = _first_numeric(raw, ("86", "ask", "askPrice", "ask_price"))
+        bid_qty = _first_numeric(raw, ("88", "bidSize", "bid_size", "bidQty"))
+        ask_qty = _first_numeric(raw, ("85", "askSize", "ask_size", "askQty"))
+
+        depths.append(
+            MarketDepthItem(
+                conid=conid_int,
+                bid=MarketDepthLevel(price=bid_price, open_qty=bid_qty),
+                ask=MarketDepthLevel(price=ask_price, open_qty=ask_qty),
+                raw=raw,
+            )
+        )
+
+    return MarketDepthResponse(status="success", total=len(depths), depths=depths)

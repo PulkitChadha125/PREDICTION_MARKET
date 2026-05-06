@@ -179,3 +179,27 @@ class MarketQuoteResponse(BaseModel):
     status: str = "success"
     total: int
     quotes: list[MarketQuoteItem]
+
+
+class MarketDepthLevel(BaseModel):
+    """One side of top-of-book depth with price and open quantity."""
+
+    price: float | None = None
+    open_qty: float | None = None
+
+
+class MarketDepthItem(BaseModel):
+    """Normalized depth row for one contract conid."""
+
+    conid: int
+    bid: MarketDepthLevel
+    ask: MarketDepthLevel
+    raw: dict[str, Any] = Field(default_factory=dict)
+
+
+class MarketDepthResponse(BaseModel):
+    """Top-of-book market depth response for one or multiple conids."""
+
+    status: str = "success"
+    total: int
+    depths: list[MarketDepthItem]
